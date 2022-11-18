@@ -14,13 +14,25 @@ import Edit from '../../assets/edit.svg'
 import Mail from '../../assets/envelopes.svg'
 
 export default function Home() {
+
+    function switchFocusLabel(index : number){
+        
+    }
+
+    var focusLabel = 0
+
+    const categories = ["Hard Skills", "Soft Skills", "Projects"]
   return (
     <Container>
       
       <Main style={{width : "100%", height : "100%"}}>
+            <div>
             <div style={{display : "flex"}}>
                 <div>
                 <Image style={{borderRadius : "50%"}} src={Profil} alt="User Image" width={200} height={200} />
+                <div style={{textAlign : "center", color : "#615F5F", fontSize : "13px"}}>
+                ~ member since 3 years ~
+                </div>
                 </div>
                 <div style={{paddingLeft : "40px", fontSize : "20px"}}>
                     <div>
@@ -41,17 +53,44 @@ export default function Home() {
                         </div>
                         <div style={{paddingLeft : "12px", display : "flex"}}>
                          <Image src={Edit} alt="User Image" width={25} height={25} />
-                         <div>
+                         <div style={{paddingLeft : "5px", color : "#848484"}}>
                             Edit
                          </div>
                         </div>
-                    
                     </div>
                 </div>
                 
-                    
+               
                
             </div>
+            <div style={{display : "flex", paddingTop : "20px"}}>
+            {categories.map((Element, index) => (
+                <button onClick={() => console.log(index)} style={{padding : "0px", border : "none", background : "none"}} >
+                    <div style={{paddingRight : "50px", display : "grid", textAlign : "center"}}>  
+                                {Element}  
+                                <svg width="100" height="10">
+                                <rect width="100" height="10" rx="6" style={{fill : "#841439", borderRadius : "25px"}} />
+                                </svg>
+                            </div>  
+                </button>
+          
+        ))}  
+            </div>
+            
+            <div>
+                
+                <div>
+                
+                </div>
+                <div>
+               
+                </div>
+                <div>
+                
+                </div>
+                </div>  
+            </div>
+            
        
       </Main>
     </Container>
