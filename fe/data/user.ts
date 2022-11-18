@@ -1,11 +1,12 @@
-type UserType = {
+export type UserType = {
 	id: number;
-	username: string;
+	email: string;
 	password: string;
 	firstName: string;
 	lastName: string;
 	role: string;
 	profilePicture: string;
+	jobTitle: string;
 };
 
 const Role = {
@@ -19,21 +20,23 @@ const Role = {
 const users: UserType[] = [
 	{
 		id: 1,
-		username: 'admin',
+		email: 'admin@msg.de',
 		password: 'admin',
 		firstName: 'Admin',
 		lastName: 'User',
 		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/men/75.jpg',
+		jobTitle: 'CEO',
 	},
 	{
 		id: 2,
-		username: 'user',
+		email: 'user@msg.de',
 		password: 'user',
 		firstName: 'Normal',
 		lastName: 'User',
 		role: Role.USER,
 		profilePicture: 'https://randomuser.me/api/portraits/men/33.jpg',
+		jobTitle: 'Software Engineer',
 	},
 ];
 
@@ -45,7 +48,7 @@ export function getUserById(id: number) {
 // login
 export function login(username: string, password: string) {
 	const user = users.find(
-		(user) => user.username === username && user.password === password
+		(user) => user.email === username && user.password === password
 	);
 	if (!user) return;
 	const { password: _, ...userWithoutPassword } = user;
@@ -53,11 +56,27 @@ export function login(username: string, password: string) {
 }
 
 // get all users
-export function getAll() {
-	return users.map((user) => {
-		const { password: _, ...userWithoutPassword } = user;
-		return userWithoutPassword;
+export async function getAll() {
+	const userfromRandomUser = await fetch(
+		'https://randomuser.me/api/?results=20'
+	)
+		.then((response) => response.json())
+		.then((data) => data.results);
+
+	const usersWithProfilePicture = userfromRandomUser.map((user) => {
+		return {
+			id: user.login.uuid,
+			email: user.email.replace(/\@example.com/, '@msg.de'),
+			password: user.login.password,
+			firstName: user.name.first,
+			lastName: user.name.last,
+			role: Role.USER,
+			profilePicture: user.picture.large,
+			jobTitle: 'Software Engineer',
+		};
 	});
+
+	return [...users, ...usersWithProfilePicture];
 }
 
 // create user
