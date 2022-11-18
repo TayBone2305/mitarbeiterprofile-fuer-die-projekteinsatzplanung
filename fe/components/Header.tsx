@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 import msgLogo from '../assets/msg-logo.svg';
-import profilePicture from '../assets/person3.jpg';
 
 const navLinks = [
 	{
@@ -28,10 +27,9 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 					</Link>
 				))}
 			</Nav>
-			<Link href={'/user/dummy'}>
+			{/* <Link href={'/user/dummy'}>
 				<Image style={{borderRadius : "50%"}} src={profilePicture} alt="User Image" width={70} height={70} />
-			</Link>
-			
+			</Link>	 */}
 		</MyHeader>
 	);
 };
@@ -41,13 +39,14 @@ export default Header;
 const MyHeader = styled.header`
 	display: flex;
 	align-items: center;
-	background-color: #314664;
+	background-color: ${(props) => props.theme.colors.white};
 	border-radius: 0.5rem;
 	margin: 0.5rem;
 	padding: 0.5rem;
 	position: sticky;
 	top: 0.5rem;
 	box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+	z-index: 5;
 `;
 const Nav = styled.nav`
 	flex: 1;
@@ -57,7 +56,7 @@ const Nav = styled.nav`
 
 	a {
 		position: relative;
-		color: #000000;
+		color: ${(props) => props.theme.colors.primary};
 		text-decoration: none;
 		font-weight: bolder;
 		&::after {
@@ -74,7 +73,7 @@ const Nav = styled.nav`
 			transition: width 0.3s ease-in-out 1s, bottom 0.3s ease-in-out 1s;
 		}
 		&.active {
-			color: #E2E2E2;
+			color: ${(props) => props.theme.colors.gray};
 
 			&::after {
 				transition: width 0.3s ease-in-out;
