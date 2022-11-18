@@ -1,8 +1,8 @@
 const Footer: React.FC<{}> = () => {
 	return (
-		<header>
+		<footer>
 			<h1>My App Footer</h1>
-		</header>
+		</footer>
 	);
 };
 
