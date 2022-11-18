@@ -7,7 +7,7 @@ import Mail from '../../assets/envelopes.svg'
 import styled from 'styled-components';
 import Link from 'next/link';
 
-export default function dummy() {
+export default function softSkills() {
 
     function switchFocusLabel(index : number){
         focusLabel = index
@@ -47,8 +47,7 @@ export default function dummy() {
                          <Image src={Phone} alt="User Image" width={25} height={25} />
                         </div>
                         <div style={{paddingLeft : "12px", display : "flex"}}>
-                         <Image src={Edit} alt="User Image" width={25} height={25} />
-                         <Link href={'/user/edit'} style={{display : "flex"}}> 
+                        <Link href={'/user/edit'} style={{display : "flex"}}> 
                                 <Image src={Edit} alt="User Image" width={25} height={25} />
                                 <div style={{paddingLeft : "5px", color : "#848484"}}>
                                     Edit
@@ -63,13 +62,13 @@ export default function dummy() {
             </div>
             <div style={{display : "flex", paddingTop : "20px"}}>
             {categories.map((Element, index) => (
-                <Link href={index === 0 ? '/user/hardSkills' : index === 1 ? '/user/softSkills' : '/user/projects'}  style={{padding : "0px", border : "none", background : "none"}} >
+                <Link href={index === 0 ? '/user/hardSkills' : index === 1 ? '/user/softSkills' : '/user/projects'} style={{padding : "0px", border : "none", background : "none"}} >
                    
                         <div style={{paddingRight : "50px", display : "grid", textAlign : "center"}}>  
                         {Element}  
-                     
+      
                         <svg width="100" height="10">
-                        <rect width="100" height="10" rx="6" style={ index === 0 ? {fill : "#841439", borderRadius : "25px"} : {fill : "#FFFFFF", borderRadius : "25px"}} />
+                        <rect width="100" height="10" rx="6" style={ index === 1 ? {fill : "#841439", borderRadius : "25px"} : {fill : "#FFFFFF", borderRadius : "25px"}} />
                         </svg>
                          
                     </div>  
