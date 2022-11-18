@@ -1,10 +1,6 @@
-import 'styled-components'
+import 'styled-components';
+import { Theme } from './theme';
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    colors: {
-      primary: string
-      secondary: string
-    }
-  }
+	export interface DefaultTheme extends ThemeType {}
 }
