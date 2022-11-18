@@ -40,13 +40,17 @@ const Home: NextPage<{ users: UserType[] }> = ({ users }) => {
 				<span>&#128269;</span>
 			</SearchWithIcon>
 
-			<UsersContainer>
-				{filteredUsers.map((user) => (
-					<UserCard {...user} />
-				))}
-			</UsersContainer>
+			{filteredUsers.length > 0 ? (
+				<UsersContainer>
+					{filteredUsers.map((user) => (
+						<UserCard {...user} />
+					))}
+				</UsersContainer>
+			) : (
+				<h4>Keine Mitarbeiter gefunden, ändere bitte deine Suchparameter</h4>
+			)}
 
-			<Cards />
+			{/* <Cards /> */}
 		</Container>
 	);
 };
