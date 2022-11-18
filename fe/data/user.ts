@@ -46,9 +46,9 @@ export function getUserById(id: number) {
 }
 
 // login
-export function login(username: string, password: string) {
+export function login(email: string, password: string) {
 	const user = users.find(
-		(user) => user.email === username && user.password === password
+		(user) => user.email === email && user.password === password
 	);
 	if (!user) return;
 	const { password: _, ...userWithoutPassword } = user;
