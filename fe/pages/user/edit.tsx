@@ -47,7 +47,6 @@ export default function dummy() {
                          <Image src={Phone} alt="User Image" width={25} height={25} />
                         </div>
                         <div style={{paddingLeft : "12px", display : "flex"}}>
-                         <Image src={Edit} alt="User Image" width={25} height={25} />
                          <Link href={'/user/edit'} style={{display : "flex"}}> 
                                 <Image src={Edit} alt="User Image" width={25} height={25} />
                                 <div style={{paddingLeft : "5px", color : "#848484"}}>
