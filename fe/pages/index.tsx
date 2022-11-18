@@ -8,7 +8,7 @@ import UserCard from '../components/UserCard';
 import { useState } from 'react';
 
 const Home: NextPage<{ users: UserType[] }> = ({ users }) => {
-	const [searchString, setSearchString] = useState('second');
+	const [searchString, setSearchString] = useState('');
 
 	const filteredUsers = users.filter((user) => {
 		const fullName = user.firstName + user.lastName;
@@ -78,6 +78,10 @@ const SearchWithIcon = styled.div`
 	span {
 		position: absolute;
 		right: 0.5rem;
+		right: 0.81rem;
+		pointer-events: none;
+		top: 50%;
+		transform: translate(0, -100%);
 	}
 `;
 
