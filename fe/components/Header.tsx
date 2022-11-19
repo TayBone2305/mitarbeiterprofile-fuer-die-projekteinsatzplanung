@@ -45,7 +45,10 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 
 	return (
 		<MyHeader>
+			<Link href={'/'}>
 			<Image src={msgLogo} alt="My App Logo" width={100} height={50} />
+			</Link>
+			
 			<Nav>
 				{navLinks.map((link) => (
 					<Link
@@ -61,7 +64,7 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 					<LoggedInAs>
 						Du bist eingeloggt als <span>{user.email}</span>
 					</LoggedInAs>
-					<Link href={'/user/dummy'}>
+					<Link href={'/profile'}>
 						<Image
 							style={{ borderRadius: '50%' }}
 							src={user.profilePicture}
