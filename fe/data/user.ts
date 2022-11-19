@@ -11,6 +11,7 @@ export type UserType = {
 	hireDate: string;
 };
 
+
 export const Role = {
 	ADMIN: 'admin',
 	USER: 'user',

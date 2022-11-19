@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getUserById, users, UserType } from '../../../data/user';
 import { GetStaticProps, NextPage } from 'next';
 import UserMetaData from '../../../components/UserMetaData';
+import UserMetaDataDetail from '../../../components/UserMetaDataDetail';
 
 const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
 	const { jobTitle, firstName, lastName, id, email, phone } = user;
@@ -19,7 +20,7 @@ const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
 	return (
 		<>
 			<Container>
-				<UserMetaData user={user} />
+				<UserMetaDataDetail user={user} />
 			</Container>
 		</>
 	);
