@@ -9,8 +9,9 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			<Header pathName={router.pathname} />
-			<Main>{children}</Main>
-			<Footer />
+			<Main>{children}
+			</Main>
+			{/* <Footer /> */}
 		</>
 	);
 };

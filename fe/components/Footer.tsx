@@ -1,4 +1,20 @@
+import { useState, useEffect } from 'react';
+
 const Footer: React.FC<{}> = () => {
+	function getWindowDimensions() {
+		const { innerWidth: width, innerHeight: height } = window;
+		console.log("i")
+		const isMobile = window.innerWidth <= 1300;
+		if(isMobile){
+			console.log("mobile")
+		}else {
+			console.log("desktop", window.innerWidth)
+		}
+		return {
+		  width
+		};
+	  }
+
 	return (
 		<footer style={{width : "max-content"}}>
 			<div style={{padding : "30px", background : "#AEAEAE", display : "flex", marginTop : "20px"}}>
@@ -6,7 +22,10 @@ const Footer: React.FC<{}> = () => {
 					<div style={{color : "#841439"}}>
 						Kontakt
 					</div>
-					<div style={{fontSize : "12px", paddingTop : "12px"}}>
+					<button onClick={() => getWindowDimensions()}>
+						d
+					</button>
+					<div  style={ {paddingRight : "220px", paddingTop : "12px"}  }>
 						<div>
 						msg systems ag
 						</div>
@@ -18,7 +37,7 @@ const Footer: React.FC<{}> = () => {
 						</div>
 					</div>
 				</div>
-				<div style={{paddingRight : "220px"}}>
+				<div style={{paddingRight : "220px"} }>
 					<div style={{color : "#841439"}}>
 					Branchen
 					</div>
@@ -35,7 +54,7 @@ const Footer: React.FC<{}> = () => {
 					</div>
 					
 				</div>
-				<div style={{paddingRight : "220px"}}>
+				<div  style={ {paddingRight : "220px"}}>
 					<div style={{color : "#841439"}}>
 					msg-Gruppe
 
