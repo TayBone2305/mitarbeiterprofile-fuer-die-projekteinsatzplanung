@@ -18,7 +18,7 @@ const Login: React.FC = () => {
 		if (user) {
 			setUser(user);
 			setError('');
-			router.replace('/');
+			router.replace('/overview');
 		} else {
 			setError('Invalid email or password');
 		}

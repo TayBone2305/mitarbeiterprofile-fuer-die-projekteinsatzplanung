@@ -51,7 +51,7 @@ const UserMetaData: React.FC<{ user: UserType }> = ({
 				height={200}
 			/>
 			<h1>
-				{firstName}, {lastName} test
+				{firstName}, {lastName} 
 			</h1>
 			<p>{jobTitle}</p>
 			<p>member since: {getRelativeTime(new Date(hireDate).getTime())}</p>

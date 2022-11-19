@@ -81,7 +81,6 @@ export default function dummy() {
           
         ))}  
             </div>
-              <CompLabelSmall textLeft={'fasdfadsfasdf'} textRight={'adsfasdfads'} ></CompLabelSmall>          
             </div>
             
        

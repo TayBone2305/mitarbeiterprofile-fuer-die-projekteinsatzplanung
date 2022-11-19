@@ -16,7 +16,7 @@ const CompLabel = (props : ILabel) => {
 	return (
 		<div>
 			
-            <div style={{backgroundColor : "#841439", width : "300px", height : "100px", borderRadius : "15px", paddingLeft : "20px", lineHeight : "100px", marginTop: "20px", color : "white", display : "flex"}}>
+            <div style={{backgroundColor : "#841439", width : "450px", height : "100px", borderRadius : "15px", paddingLeft : "20px", lineHeight : "100px", marginTop: "20px", color : "white", display : "flex"}}>
                 <div style={{fontSize : "25px"}}>
                   {props.name}
 
