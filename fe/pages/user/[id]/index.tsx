@@ -1,11 +1,9 @@
-import Image from 'next/image';
-import Edit from '../../../assets/edit.svg';
 import styled from 'styled-components';
 import { getUserById, users, UserType } from '../../../data/user';
 import { GetStaticProps, NextPage } from 'next';
 import UserMetaData from '../../../components/UserMetaData';
 
-const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
+const SingleUserPage: NextPage<{ user: UserType }> = ({ user }) => {
 	const { jobTitle, firstName, lastName, id, email, phone } = user;
 	function switchFocusLabel(index: number) {
 		focusLabel = index;
@@ -24,7 +22,7 @@ const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
 	);
 };
 
-export default Dummy;
+export default SingleUserPage;
 
 export async function getStaticPaths() {
 	const availableRoutes = users.map(({ id }) => ({

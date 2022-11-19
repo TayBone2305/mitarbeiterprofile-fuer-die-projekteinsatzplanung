@@ -20,7 +20,7 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 			: fullName.toLowerCase().includes(searchString.toLowerCase());
 	});
 
-	if (!loggedInUser?.role.includes(Role.ADMIN)) {
+	if (loggedInUser?.role !== Role.ADMIN) {
 		return (
 			<Container>
 				<Title>Übersicht</Title>

@@ -24,7 +24,7 @@ const categories = [
 	{ name: 'Projects', slug: 'projects' },
 ];
 
-const UserMetaData: React.FC<{ user: UserType }> = ({
+const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 	user: {
 		firstName,
 		lastName,

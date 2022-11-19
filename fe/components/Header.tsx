@@ -17,7 +17,7 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 					},
 			  ]
 			: []),
-		...(user?.role === Role.GUEST || user?.role === Role.USER
+		...(user
 			? [
 					{
 						name: 'My Profile',
@@ -40,6 +40,8 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 					},
 			  ]),
 	];
+
+	console.log(user);
 
 	return (
 		<MyHeader>
