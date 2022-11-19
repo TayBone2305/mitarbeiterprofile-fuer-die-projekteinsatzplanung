@@ -45,13 +45,11 @@ export async function getStaticPaths() {
 
 	return {
 		paths: availableRoutes,
-		fallback: false, // can also be true or 'blocking'
+		fallback: false,
 	};
 }
 
 export const getStaticProps: GetStaticProps = (context) => {
-	console.log({ idOfUserTORender: context.params.id });
-
 	const user = getUserById(Number(context.params.id));
 
 	return {

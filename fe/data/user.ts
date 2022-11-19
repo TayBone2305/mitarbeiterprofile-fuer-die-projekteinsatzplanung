@@ -37,7 +37,7 @@ export enum Role {
 export const users: UserType[] = [
 	{
 		id: 1,
-		email: 'admin@msg.de',
+		email: 'admin@msg.group',
 		password: 'admin',
 		firstName: 'Admin',
 		lastName: 'User',
@@ -81,7 +81,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 2,
-		email: 'user@msg.de',
+		email: 'user@msg.group',
 		password: 'user',
 		firstName: 'Normal',
 		lastName: 'User',
@@ -94,6 +94,14 @@ export const users: UserType[] = [
 			{
 				name: 'HTML',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'C++',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Kreativ',
+				type: SkillType.SOFT,
 			},
 			{
 				name: 'Haskell',
@@ -133,7 +141,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 3,
-		email: 'judith.sims@msg.de',
+		email: 'judith.sims@msg.group',
 		password: 'wwwwww',
 		firstName: 'Judith',
 		lastName: 'Sims',
@@ -148,8 +156,20 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
+				name: 'C++',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Kreativ',
+				type: SkillType.SOFT,
+			},
+			{
 				name: 'JavaScript',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
 			},
 			{
 				name: 'Vue.js',
@@ -157,6 +177,22 @@ export const users: UserType[] = [
 			},
 			{
 				name: 'Durchsetzungsvermögen',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'C++',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Kreativ',
 				type: SkillType.SOFT,
 			},
 		],
@@ -177,7 +213,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 4,
-		email: 'ana.gauthier@msg.de',
+		email: 'ana.gauthier@msg.group',
 		password: 'babylove',
 		firstName: 'Ana',
 		lastName: 'Gauthier',
@@ -193,6 +229,14 @@ export const users: UserType[] = [
 			},
 			{
 				name: 'C#',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'VHDL',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Fortran 90',
 				type: SkillType.HARD,
 			},
 			{
@@ -221,7 +265,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 5,
-		email: 'samuel.kyllonen@msg.de',
+		email: 'samuel.kyllonen@msg.group',
 		password: 'firefigh',
 		firstName: 'Samuel',
 		lastName: 'Kyllonen',
@@ -240,6 +284,14 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
+				name: 'C++',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Kreativ',
+				type: SkillType.SOFT,
+			},
+			{
 				name: 'C',
 				type: SkillType.HARD,
 			},
@@ -250,7 +302,8 @@ export const users: UserType[] = [
 			{
 				name: 'JavaScript',
 				type: SkillType.HARD,
-			},			{
+			},
+			{
 				name: 'Empathie',
 				type: SkillType.SOFT,
 			},
@@ -272,7 +325,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 6,
-		email: 'aubrey.robertson@msg.de',
+		email: 'aubrey.robertson@msg.group',
 		password: 'fowler',
 		firstName: 'Aubrey',
 		lastName: 'Robertson',
@@ -291,8 +344,24 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
+			},
+			{
 				name: 'Python',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'SQL',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Empathie',
+				type: SkillType.SOFT,
 			},
 			{
 				name: 'Teamfähig',
@@ -316,7 +385,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 7,
-		email: 'david.martin@msg.de',
+		email: 'david.martin@msg.group',
 		password: 'redskin',
 		firstName: 'David',
 		lastName: 'Martin',
@@ -337,6 +406,10 @@ export const users: UserType[] = [
 			{
 				name: 'Rust',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
 			},
 			{
 				name: 'Strukturierte Arbeitsweise',
@@ -360,7 +433,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 8,
-		email: 'ysmyn.shylyrd@msg.de',
+		email: 'ysmyn.shylyrd@msg.group',
 		password: 'hewitt',
 		firstName: 'یاسمین',
 		lastName: 'سهيلي راد',
@@ -386,6 +459,14 @@ export const users: UserType[] = [
 				name: 'Flexibel',
 				type: SkillType.SOFT,
 			},
+			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
+			},
 		],
 		projects: [
 			{
@@ -404,7 +485,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 9,
-		email: 'hugo.velasco@msg.de',
+		email: 'hugo.velasco@msg.group',
 		password: 'sadie1',
 		firstName: 'Hugo',
 		lastName: 'Velasco',
@@ -430,6 +511,14 @@ export const users: UserType[] = [
 				name: 'Zielorientiert',
 				type: SkillType.SOFT,
 			},
+			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
+			},
 		],
 		projects: [
 			{
@@ -448,7 +537,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 10,
-		email: 'amy.beck@msg.de',
+		email: 'amy.beck@msg.group',
 		password: 'cheyenne',
 		firstName: 'Amy',
 		lastName: 'Beck',
@@ -492,7 +581,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 11,
-		email: 'janina.verspeek@msg.de',
+		email: 'janina.verspeek@msg.group',
 		password: 'owen',
 		firstName: 'Janina',
 		lastName: 'Verspeek',
@@ -517,7 +606,7 @@ export const users: UserType[] = [
 			{
 				name: 'Selbstdiszipiln',
 				type: SkillType.SOFT,
-			}
+			},
 		],
 		projects: [
 			{
@@ -536,7 +625,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 12,
-		email: 'kelly.fowler@msg.de',
+		email: 'kelly.fowler@msg.group',
 		password: 'benton',
 		firstName: 'Kelly',
 		lastName: 'Fowler',
@@ -553,6 +642,14 @@ export const users: UserType[] = [
 			{
 				name: 'LUA',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
 			},
 			{
 				name: 'M',
@@ -580,7 +677,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 13,
-		email: 'ahmet.tokgoz@msg.de',
+		email: 'ahmet.tokgoz@msg.group',
 		password: 'potato',
 		firstName: 'Ahmet',
 		lastName: 'Tokgöz',
@@ -592,6 +689,14 @@ export const users: UserType[] = [
 		skills: [
 			{
 				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'VHDL',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Fortran 90',
 				type: SkillType.HARD,
 			},
 			{
@@ -624,7 +729,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 14,
-		email: 'maya.walker@msg.de',
+		email: 'maya.walker@msg.group',
 		password: 'spam',
 		firstName: 'Maya',
 		lastName: 'Walker',
@@ -637,6 +742,18 @@ export const users: UserType[] = [
 			{
 				name: 'Joy',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'M',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Organisationstalent',
+				type: SkillType.SOFT,
 			},
 			{
 				name: 'ML',
@@ -668,7 +785,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 15,
-		email: 'nina.williams@msg.de',
+		email: 'nina.williams@msg.group',
 		password: 'nikki1',
 		firstName: 'Nina',
 		lastName: 'Williams',
@@ -688,6 +805,14 @@ export const users: UserType[] = [
 			},
 			{
 				name: 'Fortran',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'VHDL',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Fortran 90',
 				type: SkillType.HARD,
 			},
 			{
@@ -712,7 +837,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 16,
-		email: 'rishaan.prabhakaran@msg.de',
+		email: 'rishaan.prabhakaran@msg.group',
 		password: 'tanker',
 		firstName: 'Rishaan',
 		lastName: 'Prabhakaran',
@@ -731,11 +856,31 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
+				name: 'VHDL',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Fortran 90',
+				type: SkillType.HARD,
+			},
+			{
 				name: 'JavaScript',
 				type: SkillType.HARD,
 			},
 			{
 				name: 'Stressresitent',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'M',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Organisationstalent',
 				type: SkillType.SOFT,
 			},
 		],
@@ -756,7 +901,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 17,
-		email: 'dragomir.radanovic@msg.de',
+		email: 'dragomir.radanovic@msg.group',
 		password: 'tongue',
 		firstName: 'Dragomir',
 		lastName: 'Radanović',
@@ -775,9 +920,22 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'M',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Organisationstalent',
+				type: SkillType.SOFT,
+			},
+			{
 				name: 'CLIST',
 				type: SkillType.HARD,
-			},			{
+			},
+			{
 				name: 'Kommunikativ',
 				type: SkillType.SOFT,
 			},
@@ -799,7 +957,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 18,
-		email: 'ruben.thomas@msg.de',
+		email: 'ruben.thomas@msg.group',
 		password: 'miller1',
 		firstName: 'Ruben',
 		lastName: 'Thomas',
@@ -839,7 +997,7 @@ export const users: UserType[] = [
 	},
 	{
 		id: 19,
-		email: 'carmen.lozano@msg.de',
+		email: 'carmen.lozano@msg.group',
 		password: 'jeanette',
 		firstName: 'Carmen',
 		lastName: 'Lozano',
@@ -923,7 +1081,7 @@ export function create(user: Omit<UserType, 'id' | 'role'>) {
 // const usersWithProfilePicture = userfromRandomUser.map((user) => {
 // 	return {
 // 		id: user.login.uuid,
-// 		email: user.email.replace(/\@example.com/, '@msg.de'),
+// 		email: user.email.replace(/\@example.com/, '@msg.group'),
 // 		password: user.login.password,
 // 		firstName: user.name.first,
 // 		lastName: user.name.last,
