@@ -59,6 +59,10 @@ export const users: UserType[] = [
 				name: 'JavaScript',
 				type: SkillType.HARD,
 			},
+			{
+				name: 'Organisationstalent',
+				type: SkillType.SOFT,
+			},
 		],
 		projects: [
 			{
@@ -92,11 +96,11 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'Haskell',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'Java',
 				type: SkillType.HARD,
 			},
 			{
@@ -140,7 +144,7 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'OCaml',
 				type: SkillType.HARD,
 			},
 			{
@@ -148,11 +152,11 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
-				name: 'React',
+				name: 'Vue.js',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'Teamfäigkeit',
+				name: 'Durchsetzungsvermögen',
 				type: SkillType.SOFT,
 			},
 		],
@@ -184,16 +188,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'Swift',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'C#',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'C++',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Kreativ',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -224,7 +232,7 @@ export const users: UserType[] = [
 		hireDate: '2020-01-01',
 		skills: [
 			{
-				name: 'CSS',
+				name: 'Ruby',
 				type: SkillType.HARD,
 			},
 			{
@@ -232,16 +240,19 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
-				name: 'HTML',
+				name: 'C',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'SQL',
 				type: SkillType.HARD,
 			},
 			{
 				name: 'JavaScript',
 				type: SkillType.HARD,
+			},			{
+				name: 'Empathie',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -272,16 +283,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'PHP',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'Objective-C',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'Python',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Teamfähig',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -312,16 +327,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'VHDL',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'Fortran 90',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'Rust',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Strukturierte Arbeitsweise',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -356,12 +375,16 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'x86 Assembly',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'ARM Assembly',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Flexibel',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -392,16 +415,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'GO',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'PHP',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'Perl',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Zielorientiert',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -432,16 +459,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'JavaEE',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'Python',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'C',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Empathie',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -472,17 +503,21 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'Visual Basic',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'Pascal',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'Basic',
 				type: SkillType.HARD,
 			},
+			{
+				name: 'Selbstdiszipiln',
+				type: SkillType.SOFT,
+			}
 		],
 		projects: [
 			{
@@ -512,16 +547,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'Lisp',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'LUA',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'M',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Organisationstalent',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -560,8 +599,12 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'PostScript',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Kritikfähig',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -592,16 +635,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'Joy',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'ML',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'OPAL',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Teamfähigkeit',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -632,16 +679,20 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'D',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'Visual Basic',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'Fortran',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Eigeninitiative',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
@@ -683,6 +734,10 @@ export const users: UserType[] = [
 				name: 'JavaScript',
 				type: SkillType.HARD,
 			},
+			{
+				name: 'Stressresitent',
+				type: SkillType.SOFT,
+			},
 		],
 		projects: [
 			{
@@ -712,16 +767,19 @@ export const users: UserType[] = [
 		hireDate: '2019-01-01',
 		skills: [
 			{
-				name: 'HTML',
+				name: 'Bliss',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'Oberon',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'CLIST',
 				type: SkillType.HARD,
+			},			{
+				name: 'Kommunikativ',
+				type: SkillType.SOFT,
 			},
 		],
 		projects: [
