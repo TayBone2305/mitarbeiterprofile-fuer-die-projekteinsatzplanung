@@ -2,19 +2,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 import msgLogo from '../assets/msg-logo.svg';
-
-const navLinks = [
-	{
-		name: 'Overview',
-		href: '/',
-	},
-	{
-		name: 'About',
-		href: '/about',
-	},
-];
+import { useUser } from '../context/user';
 
 const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
+	const { user } = useUser();
+
+	const navLinks = [
+		{
+			name: 'Overview',
+			href: '/',
+		},
+		{
+			name: !user ? 'Login' : 'Logout',
+			href: !user ? '/login' : '/logout',
+		},
+	];
+
 	return (
 		<MyHeader>
 			<Image src={msgLogo} alt="My App Logo" width={100} height={50} />
@@ -27,9 +30,23 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 					</Link>
 				))}
 			</Nav>
-			{/* <Link href={'/user/dummy'}>
-				<Image style={{borderRadius : "50%"}} src={profilePicture} alt="User Image" width={70} height={70} />
-			</Link>	 */}
+
+			{user && (
+				<>
+					<LoggedInAs>
+						Du bist eingeloggt als <span>{user.email}</span>
+					</LoggedInAs>
+					<Link href={'/user/dummy'}>
+						<Image
+							style={{ borderRadius: '50%' }}
+							src={user.profilePicture}
+							alt="User Image"
+							width={40}
+							height={40}
+						/>
+					</Link>
+				</>
+			)}
 		</MyHeader>
 	);
 };
@@ -81,5 +98,17 @@ const Nav = styled.nav`
 				opacity: 1;
 			}
 		}
+	}
+`;
+
+const LoggedInAs = styled.p`
+	color: ${(props) => props.theme.colors.gray};
+	font-size: 0.8rem;
+	margin-right: 1rem;
+	span {
+		color: ${(props) => props.theme.colors.text};
+		padding: 5px;
+		border-radius: 5px;
+		background-color: ${(props) => props.theme.colors.secondary};
 	}
 `;

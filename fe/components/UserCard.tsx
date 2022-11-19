@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { UserType } from '../data/user';
-import MoreButton from './moreButton';
+import MoreButton from './MoreButton';
 import Image from 'next/image';
 
 const UserCard: React.FC<UserType> = ({

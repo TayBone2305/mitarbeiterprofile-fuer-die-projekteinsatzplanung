@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import styled from 'styled-components';
 import Footer from './Footer';
 import Header from './Header';
 
@@ -6,12 +7,15 @@ const Layout = ({ children }) => {
 	const router = useRouter();
 
 	return (
-		<div>
+		<>
 			<Header pathName={router.pathname} />
-			<main>{children}</main>
+			<Main>{children}</Main>
 			<Footer />
-		</div>
+		</>
 	);
 };
 
 export default Layout;
+const Main = styled.main`
+	min-height: 80vh;
+`;

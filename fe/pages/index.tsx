@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { Title, CodeTag } from '../components/sharedstyles';
-import Cards from '../components/cards';
+import { Title } from '../components/sharedstyles';
 import { getAll, UserType } from '../data/user';
 import styled from 'styled-components';
 import { NextPage } from 'next';
@@ -8,7 +7,7 @@ import UserCard from '../components/UserCard';
 import { useState } from 'react';
 
 const Home: NextPage<{ users: UserType[] }> = ({ users }) => {
-	const [searchString, setSearchString] = useState('second');
+	const [searchString, setSearchString] = useState('');
 
 	const filteredUsers = users.filter((user) => {
 		const fullName = user.firstName + user.lastName;
@@ -40,13 +39,17 @@ const Home: NextPage<{ users: UserType[] }> = ({ users }) => {
 				<span>&#128269;</span>
 			</SearchWithIcon>
 
-			<UsersContainer>
-				{filteredUsers.map((user) => (
-					<UserCard {...user} />
-				))}
-			</UsersContainer>
+			{filteredUsers.length > 0 ? (
+				<UsersContainer>
+					{filteredUsers.map((user) => (
+						<UserCard {...user} />
+					))}
+				</UsersContainer>
+			) : (
+				<h4>Keine Mitarbeiter gefunden, ändere bitte deine Suchparameter</h4>
+			)}
 
-			<Cards />
+			{/* <Cards /> */}
 		</Container>
 	);
 };
@@ -78,6 +81,10 @@ const SearchWithIcon = styled.div`
 	span {
 		position: absolute;
 		right: 0.5rem;
+		right: 0.81rem;
+		pointer-events: none;
+		top: 50%;
+		transform: translate(0, -100%);
 	}
 `;
 
