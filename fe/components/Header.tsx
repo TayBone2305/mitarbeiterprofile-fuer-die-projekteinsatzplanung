@@ -6,7 +6,6 @@ import { useUser } from '../context/user';
 
 const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 	const { user } = useUser();
-	console.log({ user });
 
 	const navLinks = [
 		{
