@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { Title, CodeTag } from '../components/sharedstyles';
-import Cards from '../components/cards';
+import { Title } from '../components/sharedstyles';
 import { getAll, UserType } from '../data/user';
 import styled from 'styled-components';
 import { NextPage } from 'next';
