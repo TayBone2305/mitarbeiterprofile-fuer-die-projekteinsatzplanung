@@ -7,6 +7,8 @@ export type UserType = {
 	role: string;
 	profilePicture: string;
 	jobTitle: string;
+	phone: string;
+	hireDate: string;
 };
 
 const Role = {
@@ -27,6 +29,8 @@ export const users: UserType[] = [
 		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/men/75.jpg',
 		jobTitle: 'CEO',
+		phone: '1234567890',
+		hireDate: '2009-01-01',
 	},
 	{
 		id: 2,
@@ -37,6 +41,8 @@ export const users: UserType[] = [
 		role: Role.USER,
 		profilePicture: 'https://randomuser.me/api/portraits/men/33.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 3,
@@ -47,6 +53,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/71.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 4,
@@ -57,6 +65,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/30.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 5,
@@ -67,6 +77,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/99.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2020-01-01',
 	},
 	{
 		id: 6,
@@ -77,6 +89,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/62.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 7,
@@ -87,6 +101,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/50.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 8,
@@ -97,6 +113,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/95.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 9,
@@ -107,6 +125,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/77.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 10,
@@ -117,6 +137,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/0.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 11,
@@ -127,6 +149,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/60.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 12,
@@ -137,6 +161,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/70.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 13,
@@ -147,6 +173,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/8.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 14,
@@ -157,6 +185,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/14.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 15,
@@ -167,6 +197,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/8.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 16,
@@ -177,6 +209,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/41.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 17,
@@ -187,6 +221,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/51.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 18,
@@ -197,6 +233,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/men/40.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 	{
 		id: 19,
@@ -207,6 +245,8 @@ export const users: UserType[] = [
 		role: 'user',
 		profilePicture: 'https://randomuser.me/api/portraits/women/23.jpg',
 		jobTitle: 'Software Engineer',
+		phone: '1234567890',
+		hireDate: '2019-01-01',
 	},
 ];
 

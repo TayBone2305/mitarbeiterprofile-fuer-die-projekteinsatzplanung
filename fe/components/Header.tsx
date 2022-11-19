@@ -65,7 +65,7 @@ const MyHeader = styled.header`
 	box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 	z-index: 5;
 `;
-const Nav = styled.nav`
+export const Nav = styled.nav`
 	flex: 1;
 	display: flex;
 	justify-content: center;

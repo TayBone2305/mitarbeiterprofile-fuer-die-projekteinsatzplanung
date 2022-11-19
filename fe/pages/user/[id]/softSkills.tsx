@@ -1,15 +1,12 @@
 import Image from 'next/image';
-import Profil from '../../assets/person1.svg';
-import Phone from '../../assets/phone-alt.svg';
-import Edit from '../../assets/edit.svg';
-import Mail from '../../assets/envelopes.svg';
+import Profil from '../../../assets/person1.svg';
+import Phone from '../../../assets/phone-alt.svg';
+import Edit from '../../../assets/edit.svg';
+import Mail from '../../../assets/envelopes.svg';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { getUserById, users, UserType } from '../../data/user';
-import { GetStaticProps, NextPage } from 'next';
 
-const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
-	const { jobTitle } = user;
+export default function softSkills() {
 	function switchFocusLabel(index: number) {
 		focusLabel = index;
 		console.log(focusLabel, 'test');
@@ -42,7 +39,7 @@ const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
 						</div>
 						<div style={{ paddingLeft: '40px', fontSize: '20px' }}>
 							<div>Max Mustermann</div>
-							<div style={{ paddingTop: '30px' }}>{jobTitle}</div>
+							<div style={{ paddingTop: '30px' }}>Software Dev</div>
 							<div style={{ paddingTop: '30px' }}>ab 18.11.2022 Verfügbar</div>
 							<div style={{ paddingTop: '30px', display: 'flex' }}>
 								<div>
@@ -52,7 +49,6 @@ const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
 									<Image src={Phone} alt="User Image" width={25} height={25} />
 								</div>
 								<div style={{ paddingLeft: '12px', display: 'flex' }}>
-									<Image src={Edit} alt="User Image" width={25} height={25} />
 									<Link href={'/user/edit'} style={{ display: 'flex' }}>
 										<Image src={Edit} alt="User Image" width={25} height={25} />
 										<div style={{ paddingLeft: '5px', color: '#848484' }}>
@@ -88,7 +84,7 @@ const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
 											height="10"
 											rx="6"
 											style={
-												index === 0
+												index === 1
 													? { fill: '#841439', borderRadius: '25px' }
 													: { fill: '#FFFFFF', borderRadius: '25px' }
 											}
@@ -102,30 +98,7 @@ const Dummy: NextPage<{ user: UserType }> = ({ user }) => {
 			</Main>
 		</Container>
 	);
-};
-
-export default Dummy;
-
-export async function getStaticPaths() {
-	const availableRoutes = users.map(({ id }) => ({
-		params: { id: id.toString() },
-	}));
-
-	return {
-		paths: availableRoutes,
-		fallback: false, // can also be true or 'blocking'
-	};
 }
-
-export const getStaticProps: GetStaticProps = (context) => {
-	console.log({ idOfUserTORender: context.params.id });
-
-	const user = getUserById(Number(context.params.id));
-
-	return {
-		props: { user },
-	};
-};
 
 const Main = styled.div`
 	padding: 5rem 0;
