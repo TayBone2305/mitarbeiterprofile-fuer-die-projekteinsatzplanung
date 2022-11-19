@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Edit from '../assets/edit.svg';
 import Phone from '../assets/phone-alt.svg';
 import Mail from '../assets/envelopes.svg';
-import { Nav } from './Header';
 import { useRouter } from 'next/router';
 
 const DAY_MILLISECONDS = 1000 * 60 * 60 * 24;
@@ -19,6 +18,11 @@ function getRelativeTime(timestamp) {
 
 	return rtf.format(daysDifference, 'day');
 }
+const categories = [
+	{ name: 'Hard Skills', slug: 'hardSkills' },
+	{ name: 'Soft Skills', slug: 'softSkills' },
+	{ name: 'Projects', slug: 'projects' },
+];
 
 const UserMetaData: React.FC<{ user: UserType }> = ({
 	user: {
@@ -32,15 +36,8 @@ const UserMetaData: React.FC<{ user: UserType }> = ({
 		hireDate,
 	},
 }) => {
-	const categories = [
-		{ name: 'Hard Skills', slug: 'hardSkills' },
-		{ name: 'Soft Skills', slug: 'softSkills' },
-		{ name: 'Projects', slug: 'projects' },
-	];
 	const router = useRouter();
-	{
-		console.log(router);
-	}
+
 	return (
 		<>
 			<Image
@@ -71,24 +68,69 @@ const UserMetaData: React.FC<{ user: UserType }> = ({
 				</Link>
 			</div>
 			<div style={{ paddingTop: '30px' }}>ab 18.11.2022 Verfügbar</div>
-			<div>
-				{categories.map((category) => (
-					<Link href={id + '/' + category.slug}>{category.name}</Link>
-				))}
-			</div>
-			<Nav>
-				{categories.map((category) => (
-					<Link
-						className={`${
-							router.asPath === `/user/${id}/${category.slug}` ? 'active' : ''
-						}`}
-						href={`/user/${id}/${category.slug}`}>
-						{category.name}
-					</Link>
-				))}
-			</Nav>
+
+			<TabsWrapper>
+				<TabsComponent />
+			</TabsWrapper>
 		</>
 	);
 };
 
 export default UserMetaData;
+
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import styled from 'styled-components';
+
+const TabsComponent = () => (
+	<Tabs>
+		<TabList>
+			{categories.map((category) => (
+				<Tab>{category.name}</Tab>
+			))}
+		</TabList>
+
+		<TabPanel>
+			<h2>Any content 1</h2>
+		</TabPanel>
+		<TabPanel>
+			<h2>Any content 2</h2>
+		</TabPanel>
+	</Tabs>
+);
+
+const TabsWrapper = styled.nav`
+	/* flex: 1; */
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+
+	li {
+		position: relative;
+		color: ${(props) => props.theme.colors.primary};
+		text-decoration: none;
+		font-weight: bolder;
+		&::after {
+			content: '';
+			display: block;
+			opacity: 0;
+			position: absolute;
+			left: -8px;
+			bottom: 4px;
+			width: 70px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: ${(props) => props.theme.colors.secondary};
+			transition: width 0.3s ease-in-out 1s, bottom 0.3s ease-in-out 1s;
+		}
+		&.active {
+			color: ${(props) => props.theme.colors.gray};
+
+			&::after {
+				transition: width 0.3s ease-in-out;
+				width: 7px;
+				opacity: 1;
+			}
+		}
+	}
+`;

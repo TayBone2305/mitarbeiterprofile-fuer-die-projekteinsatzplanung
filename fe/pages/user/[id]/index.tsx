@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Edit from '../../../assets/edit.svg';
 import styled from 'styled-components';
-import Link from 'next/link';
 import { getUserById, users, UserType } from '../../../data/user';
 import { GetStaticProps, NextPage } from 'next';
 import UserMetaData from '../../../components/UserMetaData';

@@ -4,18 +4,27 @@ export type UserType = {
 	password: string;
 	firstName: string;
 	lastName: string;
-	role: string;
+	role: Role;
 	profilePicture: string;
 	jobTitle: string;
 	phone: string;
 	hireDate: string;
+	skills: {
+		name: string;
+		type: SkillType;
+	}[];
 };
 
-export const Role = {
-	ADMIN: 'admin',
-	USER: 'user',
-	GUEST: 'guest',
-};
+enum SkillType {
+	HARD = 'hard',
+	SOFT = 'soft',
+}
+
+export enum Role {
+	ADMIN = 'admin',
+	USER = 'user',
+	GUEST = 'guest',
+}
 
 // create fake user data with roles and fake profile picture
 
@@ -31,6 +40,20 @@ export const users: UserType[] = [
 		jobTitle: 'CEO',
 		phone: '1234567890',
 		hireDate: '2009-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 2,
@@ -43,6 +66,20 @@ export const users: UserType[] = [
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 3,
@@ -50,11 +87,25 @@ export const users: UserType[] = [
 		password: 'wwwwww',
 		firstName: 'Judith',
 		lastName: 'Sims',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/women/71.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 4,
@@ -62,11 +113,25 @@ export const users: UserType[] = [
 		password: 'babylove',
 		firstName: 'Ana',
 		lastName: 'Gauthier',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/women/30.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 5,
@@ -74,11 +139,25 @@ export const users: UserType[] = [
 		password: 'firefigh',
 		firstName: 'Samuel',
 		lastName: 'Kyllonen',
-		role: 'user',
+		role: Role.USER,
 		profilePicture: 'https://randomuser.me/api/portraits/men/99.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2020-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 6,
@@ -86,11 +165,25 @@ export const users: UserType[] = [
 		password: 'fowler',
 		firstName: 'Aubrey',
 		lastName: 'Robertson',
-		role: 'user',
+		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/women/62.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 7,
@@ -98,11 +191,25 @@ export const users: UserType[] = [
 		password: 'redskin',
 		firstName: 'David',
 		lastName: 'Martin',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/men/50.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 8,
@@ -110,11 +217,25 @@ export const users: UserType[] = [
 		password: 'hewitt',
 		firstName: 'یاسمین',
 		lastName: 'سهيلي راد',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/women/95.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 9,
@@ -122,11 +243,25 @@ export const users: UserType[] = [
 		password: 'sadie1',
 		firstName: 'Hugo',
 		lastName: 'Velasco',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/men/77.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 10,
@@ -134,11 +269,25 @@ export const users: UserType[] = [
 		password: 'cheyenne',
 		firstName: 'Amy',
 		lastName: 'Beck',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/women/0.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 11,
@@ -146,11 +295,25 @@ export const users: UserType[] = [
 		password: 'owen',
 		firstName: 'Janina',
 		lastName: 'Verspeek',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/women/60.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 12,
@@ -158,11 +321,25 @@ export const users: UserType[] = [
 		password: 'benton',
 		firstName: 'Kelly',
 		lastName: 'Fowler',
-		role: 'user',
+		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/men/70.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 13,
@@ -170,11 +347,25 @@ export const users: UserType[] = [
 		password: 'potato',
 		firstName: 'Ahmet',
 		lastName: 'Tokgöz',
-		role: 'user',
+		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/men/8.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 14,
@@ -182,11 +373,25 @@ export const users: UserType[] = [
 		password: 'spam',
 		firstName: 'Maya',
 		lastName: 'Walker',
-		role: 'user',
+		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/women/14.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 15,
@@ -194,11 +399,25 @@ export const users: UserType[] = [
 		password: 'nikki1',
 		firstName: 'Nina',
 		lastName: 'Williams',
-		role: 'user',
+		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/women/8.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 16,
@@ -206,11 +425,25 @@ export const users: UserType[] = [
 		password: 'tanker',
 		firstName: 'Rishaan',
 		lastName: 'Prabhakaran',
-		role: 'user',
+		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/men/41.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 17,
@@ -218,11 +451,25 @@ export const users: UserType[] = [
 		password: 'tongue',
 		firstName: 'Dragomir',
 		lastName: 'Radanović',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/men/51.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 18,
@@ -230,11 +477,25 @@ export const users: UserType[] = [
 		password: 'miller1',
 		firstName: 'Ruben',
 		lastName: 'Thomas',
-		role: 'user',
+		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/men/40.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 	{
 		id: 19,
@@ -242,11 +503,25 @@ export const users: UserType[] = [
 		password: 'jeanette',
 		firstName: 'Carmen',
 		lastName: 'Lozano',
-		role: 'user',
+		role: Role.ADMIN,
 		profilePicture: 'https://randomuser.me/api/portraits/women/23.jpg',
 		jobTitle: 'Software Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
+		skills: [
+			{
+				name: 'HTML',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
+		],
 	},
 ];
 
@@ -305,5 +580,3 @@ export function create(user: Omit<UserType, 'id' | 'role'>) {
 // });
 
 // const userToReturn = [...users, ...usersWithProfilePicture];
-
-// console.log({ userToReturn });
