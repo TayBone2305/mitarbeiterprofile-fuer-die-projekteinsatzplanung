@@ -83,7 +83,8 @@ const MyHeader = styled.header`
 	background-color: ${(props) => props.theme.colors.white};
 	border-radius: 0.5rem;
 	margin: 0.5rem;
-	padding: 0.5rem;
+	padding-block: 0.5rem;
+	padding-inline: 1rem;
 	position: sticky;
 	top: 0.5rem;
 	box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
