@@ -40,34 +40,35 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 
 	return (
 		<>
-			<Image
-				style={{ borderRadius: '50%' }}
-				src={profilePicture}
-				alt="User Image"
-				width={200}
-				height={200}
-			/>
-			<h1>
-				{firstName}, {lastName}
-			</h1>
-			<p>{jobTitle}</p>
-			<p>member since: {getRelativeTime(new Date(hireDate).getTime())}</p>
-			<div>
-				<a href={'mailto:' + email} target="_blank">
-					<Image src={Mail} alt="User Image" width={25} height={25} />
-				</a>
-				<a
-					target="_blank"
-					href={'tel:+' + phone}
-					style={{ paddingLeft: '12px' }}>
-					<Image src={Phone} alt="User Image" width={25} height={25} />
-				</a>
-				<Link href={id + '/edit'} style={{ display: 'flex' }}>
-					<Image src={Edit} alt="User Image" width={25} height={25} />
-					<div style={{ paddingLeft: '5px', color: '#848484' }}>Edit</div>
-				</Link>
-			</div>
-			<div style={{ paddingTop: '30px' }}>ab 18.11.2022 Verfügbar</div>
+			<UserMetaDataContainer>
+				<Image
+					style={{ borderRadius: '50px' }}
+					src={profilePicture}
+					alt="User Image"
+					width={200}
+					height={200}
+				/>
+				<MetaDataDetails>
+					<h1>
+						{firstName}, {lastName}
+					</h1>
+					<p>{jobTitle}</p>
+					<p>member since: {getRelativeTime(new Date(hireDate).getTime())}</p>
+					<ActionContainer>
+						<a href={'mailto:' + email} target="_blank">
+							<Image src={Mail} alt="User Image" width={25} height={25} />
+						</a>
+						<a target="_blank" href={'tel:+' + phone}>
+							<Image src={Phone} alt="User Image" width={25} height={25} />
+						</a>
+						<Link href={id + '/edit'} style={{ display: 'flex' }}>
+							<Image src={Edit} alt="User Image" width={25} height={25} />
+							<div style={{ paddingLeft: '5px', color: '#848484' }}>Edit</div>
+						</Link>
+					</ActionContainer>
+					<div style={{ paddingTop: '30px' }}>ab 18.11.2022 Verfügbar</div>
+				</MetaDataDetails>
+			</UserMetaDataContainer>
 
 			<TabsWrapper>
 				<TabsComponent />
@@ -133,4 +134,33 @@ const TabsWrapper = styled.nav`
 			}
 		}
 	}
+`;
+
+const UserMetaDataContainer = styled.div`
+	display: flex;
+	gap: 1rem;
+	border-color: ${(props) => props.theme.colors.white};
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 4px 4px 8px 0px rgba(201, 201, 201, 0.75);
+`;
+
+const MetaDataDetails = styled.div`
+	display: flex;
+	flex-direction: column;
+	h1 {
+		font-size: 2rem;
+		padding: 0;
+	}
+	p {
+		font-size: 1rem;
+		padding: 0;
+	}
+`;
+
+const ActionContainer = styled.div`
+	display: flex;
+	gap: 1rem;
 `;
