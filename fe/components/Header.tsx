@@ -64,7 +64,7 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 					<LoggedInAs>
 						Du bist eingeloggt als <span>{user.email}</span>
 					</LoggedInAs>
-					<Link href={'/user/dummy'}>
+					<Link href={'/profile'}>
 						<Image
 							style={{ borderRadius: '50%' }}
 							src={user.profilePicture}
