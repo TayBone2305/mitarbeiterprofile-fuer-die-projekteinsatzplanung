@@ -5,6 +5,7 @@ import Mail from '../../../assets/envelopes.svg';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Calendar from '../../../assets/calendar.svg';
+import { Container } from '../../../components/sharedstyles';
 
 export default function dummy() {
 	function switchFocusLabel(index: number) {
@@ -125,13 +126,4 @@ const Main = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-`;
-const Container = styled.div`
-	padding: 0 0.5rem;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	min-height: 100vh;
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Container } from '../components/sharedstyles';
 import UserMetaData from '../components/UserMetaData';
 import { useUser } from '../context/user';
 
@@ -17,8 +18,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-const Container = styled.div`
-	max-width: 875px;
-	margin: 0 auto;
-`;

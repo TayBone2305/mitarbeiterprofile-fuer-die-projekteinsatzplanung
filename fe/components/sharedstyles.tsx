@@ -29,4 +29,9 @@ const CodeTag = styled.code`
 		Bitstream Vera Sans Mono, Courier New, monospace;
 `;
 
-export { Title, CodeTag };
+const Container = styled.div`
+	max-width: 875px;
+	margin: 0 auto;
+`;
+
+export { Title, CodeTag, Container };

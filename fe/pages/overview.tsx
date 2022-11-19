@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Title } from '../components/sharedstyles';
+import { Container, Title } from '../components/sharedstyles';
 import { getAll, Role, UserType } from '../data/user';
 import styled from 'styled-components';
 import { NextPage } from 'next';
@@ -85,10 +85,6 @@ export async function getStaticProps() {
 	};
 }
 
-const Container = styled.div`
-	max-width: 875px;
-	margin: 0 auto;
-`;
 const UsersContainer = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

@@ -42,31 +42,41 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 		<>
 			<UserMetaDataContainer>
 				<Image
-					style={{ borderRadius: '50px' }}
+					style={{ borderRadius: '20px' }}
 					src={profilePicture}
 					alt="User Image"
 					width={200}
 					height={200}
 				/>
 				<MetaDataDetails>
-					<h1>
-						{firstName}, {lastName}
-					</h1>
-					<p>{jobTitle}</p>
+					<div>
+						<h1>
+							{firstName}, {lastName}
+						</h1>
+						<p>{jobTitle}</p>
+					</div>
 					<p>member since: {getRelativeTime(new Date(hireDate).getTime())}</p>
 					<ActionContainer>
-						<a href={'mailto:' + email} target="_blank">
-							<Image src={Mail} alt="User Image" width={25} height={25} />
-						</a>
-						<a target="_blank" href={'tel:+' + phone}>
-							<Image src={Phone} alt="User Image" width={25} height={25} />
-						</a>
+						<div>
+							<a
+								title="Mitarbeiter schreiben"
+								href={'mailto:' + email}
+								target="_blank">
+								<Image src={Mail} alt="User Image" width={25} height={25} />
+							</a>
+							<a
+								title="Mitarbeiter anrufen"
+								target="_blank"
+								href={'tel:+' + phone}>
+								<Image src={Phone} alt="User Image" width={25} height={25} />
+							</a>
+						</div>
 						<Link href={id + '/edit'} style={{ display: 'flex' }}>
 							<Image src={Edit} alt="User Image" width={25} height={25} />
-							<div style={{ paddingLeft: '5px', color: '#848484' }}>Edit</div>
+							Edit Profile
 						</Link>
 					</ActionContainer>
-					<div style={{ paddingTop: '30px' }}>ab 18.11.2022 Verfügbar</div>
+					<div>ab 18.11.2022 Verfügbar</div>
 				</MetaDataDetails>
 			</UserMetaDataContainer>
 
@@ -138,29 +148,54 @@ const TabsWrapper = styled.nav`
 
 const UserMetaDataContainer = styled.div`
 	display: flex;
-	gap: 1rem;
-	border-color: ${(props) => props.theme.colors.white};
-	border-width: 1px;
-	border-style: solid;
+	align-items: center;
 	border-radius: 10px;
 	padding: 20px;
+	max-width: 570px;
+	justify-content: space-evenly;
+	gap: 2rem;
+	margin: 0 auto;
 	box-shadow: 4px 4px 8px 0px rgba(201, 201, 201, 0.75);
 `;
 
 const MetaDataDetails = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: 0.5rem;
+
 	h1 {
 		font-size: 2rem;
-		padding: 0;
+		margin: 0;
+		+ p {
+			color: ${(props) => props.theme.colors.gray};
+		}
 	}
 	p {
 		font-size: 1rem;
-		padding: 0;
+		margin: 0;
 	}
 `;
 
 const ActionContainer = styled.div`
 	display: flex;
 	gap: 1rem;
+	justify-content: space-between;
+	div {
+		padding: 10px;
+		border: 1px solid ${(props) => props.theme.colors.primary};
+		border-radius: 10px;
+		justify-content: space-evenly;
+		display: flex;
+		gap: 1.5rem;
+	}
+	> a:last-child {
+		border-radius: 10px;
+		background-color: ${(props) => props.theme.colors.secondary};
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		gap: 1rem;
+		color: ${(props) => props.theme.colors.white};
+	}
 `;
