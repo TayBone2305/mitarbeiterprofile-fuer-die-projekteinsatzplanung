@@ -6,6 +6,7 @@ import Edit from '../../assets/edit.svg'
 import Mail from '../../assets/envelopes.svg'
 import styled from 'styled-components';
 import Link from 'next/link';
+import Calendar from '../../assets/calendar.svg'
 
 export default function dummy() {
 
@@ -31,13 +32,19 @@ export default function dummy() {
                 </div>
                 <div style={{paddingLeft : "40px", fontSize : "20px"}}>
                     <div>
-                        Max Mustermann
+                    <input style={{border : "none", fontSize : "25px"}} type="text" id="name" name="name" required
+                     placeholder="Max Mustermann"></input>
                     </div>
                     <div style={{paddingTop : "30px"}}>
-                        Software Dev
+                    <input style={{border : "none", fontSize : "25px"}} type="text" id="name" name="name" required
+                     placeholder="Software Dev"></input>
+                       
                     </div>
-                    <div style={{paddingTop : "30px"}}>
-                        ab 18.11.2022 Verfügbar
+                    <div style={{paddingTop : "30px", display : 'flex'}}>
+                    <Image src={Calendar} alt="User Image" width={25} height={25} />
+                    <div style={{paddingLeft : "5px", color : "#848484"}}>
+                                    Edit
+                                </div>
                     </div>
                     <div style={{paddingTop : "30px", display : "flex"}}>
                         <div>
@@ -48,7 +55,7 @@ export default function dummy() {
                         </div>
                         <div style={{paddingLeft : "12px", display : "flex"}}>
                          <Link href={'/user/edit'} style={{display : "flex"}}> 
-                                <Image src={Edit} alt="User Image" width={25} height={25} />
+                               
                                 <div style={{paddingLeft : "5px", color : "#848484"}}>
                                     Edit
                                 </div>
