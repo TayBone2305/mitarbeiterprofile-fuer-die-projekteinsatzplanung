@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 		<>
 			<Header pathName={router.pathname} />
 			<Main>{children}</Main>
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 };
