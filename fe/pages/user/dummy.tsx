@@ -6,6 +6,8 @@ import Edit from '../../assets/edit.svg'
 import Mail from '../../assets/envelopes.svg'
 import styled from 'styled-components';
 import Link from 'next/link';
+import CompLabel from '../../components/compLabel';
+
 
 export default function dummy() {
 
@@ -47,7 +49,7 @@ export default function dummy() {
                          <Image src={Phone} alt="User Image" width={25} height={25} />
                         </div>
                         <div style={{paddingLeft : "12px", display : "flex"}}>
-                         <Image src={Edit} alt="User Image" width={25} height={25} />
+                         
                          <Link href={'/user/edit'} style={{display : "flex"}}> 
                                 <Image src={Edit} alt="User Image" width={25} height={25} />
                                 <div style={{paddingLeft : "5px", color : "#848484"}}>
@@ -80,7 +82,7 @@ export default function dummy() {
         ))}  
             </div>
             
-            
+           
             </div>
             
        
