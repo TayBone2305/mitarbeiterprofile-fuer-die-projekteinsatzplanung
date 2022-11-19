@@ -21,16 +21,17 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 	const setUserMod: (value: Omit<UserType, 'password'> | null) => void = (
 		user
 	) => {
-		// set user in local storage with current timestamp
-		if (user) {
-			localStorage.setItem(
-				'user',
-				JSON.stringify({ ...user, timestamp: Date.now() })
-			);
-		} else {
-			localStorage.removeItem('user');
+		if (typeof window !== 'undefined') {
+			// set user in local storage with current timestamp
+			if (user) {
+				localStorage.setItem(
+					'user',
+					JSON.stringify({ ...user, timestamp: Date.now() })
+				);
+			} else {
+				localStorage.removeItem('user');
+			}
 		}
-
 		setUser(user);
 	};
 	useEffect(() => {

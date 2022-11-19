@@ -15,7 +15,7 @@ export type UserType = {
 	}[];
 };
 
-enum SkillType {
+export enum SkillType {
 	HARD = 'hard',
 	SOFT = 'soft',
 }
@@ -79,6 +79,18 @@ export const users: UserType[] = [
 				name: 'JavaScript',
 				type: SkillType.HARD,
 			},
+			{
+				name: 'React',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'Teamfäigkeit',
+				type: SkillType.SOFT,
+			},
+			{
+				name: 'Kommunikationsfähigkeit',
+				type: SkillType.SOFT,
+			},
 		],
 	},
 	{
@@ -89,7 +101,7 @@ export const users: UserType[] = [
 		lastName: 'Sims',
 		role: Role.GUEST,
 		profilePicture: 'https://randomuser.me/api/portraits/women/71.jpg',
-		jobTitle: 'Software Engineer',
+		jobTitle: 'Frontend Engineer',
 		phone: '1234567890',
 		hireDate: '2019-01-01',
 		skills: [
@@ -98,12 +110,16 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
-				name: 'CSS',
+				name: 'JavaScript',
 				type: SkillType.HARD,
 			},
 			{
-				name: 'JavaScript',
+				name: 'React',
 				type: SkillType.HARD,
+			},
+			{
+				name: 'Teamfäigkeit',
+				type: SkillType.SOFT,
 			},
 		],
 	},
@@ -145,6 +161,14 @@ export const users: UserType[] = [
 		phone: '1234567890',
 		hireDate: '2020-01-01',
 		skills: [
+			{
+				name: 'CSS',
+				type: SkillType.HARD,
+			},
+			{
+				name: 'JavaScript',
+				type: SkillType.HARD,
+			},
 			{
 				name: 'HTML',
 				type: SkillType.HARD,

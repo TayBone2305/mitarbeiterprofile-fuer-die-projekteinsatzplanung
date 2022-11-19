@@ -1,4 +1,4 @@
-import { UserType } from '../data/user';
+import { SkillType, UserType } from '../data/user';
 import Image from 'next/image';
 import Link from 'next/link';
 import Edit from '../assets/edit.svg';
@@ -34,6 +34,7 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 		email,
 		phone,
 		hireDate,
+		skills,
 	},
 }) => {
 	const router = useRouter();
@@ -81,7 +82,7 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 			</UserMetaDataContainer>
 
 			<TabsWrapper>
-				<TabsComponent />
+				<TabsComponent skills={skills} />
 			</TabsWrapper>
 		</>
 	);
@@ -92,23 +93,46 @@ export default UserMetaData;
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import styled from 'styled-components';
+import React from 'react';
 
-const TabsComponent = () => (
-	<Tabs>
-		<TabList>
-			{categories.map((category) => (
-				<Tab>{category.name}</Tab>
-			))}
-		</TabList>
+const TabsComponent: React.FC<{ skills: UserType['skills'] }> = ({
+	skills,
+}) => {
+	const hardSkills = skills.filter((skill) => skill.type === SkillType.HARD);
+	const softSkills = skills.filter((skill) => skill.type === SkillType.SOFT);
 
-		<TabPanel>
-			<h2>Any content 1</h2>
-		</TabPanel>
-		<TabPanel>
-			<h2>Any content 2</h2>
-		</TabPanel>
-	</Tabs>
-);
+	return (
+		<Tabs>
+			<TabList>
+				{categories.map((category) => (
+					<Tab>{category.name}</Tab>
+				))}
+			</TabList>
+
+			<TabPanel>
+				{hardSkills.length > 0 ? (
+					hardSkills.map((skill) => <p>{skill.name}</p>)
+				) : (
+					<p>Keine Hard Skills vorhanden</p>
+				)}
+			</TabPanel>
+			<TabPanel>
+				{softSkills.length > 0 ? (
+					softSkills.map((skill) => <p>{skill.name}</p>)
+				) : (
+					<p>Keine Soft Skills vorhanden</p>
+				)}
+			</TabPanel>
+			<TabPanel>
+				{softSkills.length > 0 ? (
+					hardSkills.map((skill) => <p>{skill.name}</p>)
+				) : (
+					<p>Keine Soft Projekte vorhanden</p>
+				)}
+			</TabPanel>
+		</Tabs>
+	);
+};
 
 const TabsWrapper = styled.nav`
 	/* flex: 1; */
@@ -116,7 +140,11 @@ const TabsWrapper = styled.nav`
 	justify-content: center;
 	gap: 2rem;
 
-	li {
+	.react-tabs {
+		width: 100%;
+	}
+
+	li.react-tabs__tab {
 		position: relative;
 		color: ${(props) => props.theme.colors.primary};
 		text-decoration: none;
@@ -155,7 +183,20 @@ const UserMetaDataContainer = styled.div`
 	justify-content: space-evenly;
 	gap: 2rem;
 	margin: 0 auto;
-	box-shadow: 4px 4px 8px 0px rgba(201, 201, 201, 0.75);
+	margin-bottom: 3rem;
+	box-shadow: 4px 7px 14px 6px #0000001c;
+	position: relative;
+	background-color: ${(props) => props.theme.colors.white};
+	&::after {
+		content: '';
+		width: 114%;
+		height: 100%;
+		background-color: #841439;
+		position: absolute;
+		z-index: -1;
+		border-radius: 20px;
+		bottom: 60px;
+	}
 `;
 
 const MetaDataDetails = styled.div`
