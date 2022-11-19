@@ -1,40 +1,61 @@
 import styled from 'styled-components';
-import { UserType } from '../data/user';
 import MoreButton from './MoreButton';
 import Image from 'next/image';
 
-const UserCard: React.FC<UserType> = ({
-	id,
-	profilePicture,
-	firstName,
-	lastName,
-	email,
-	jobTitle,
-}) => {
+const UserCard = ({ employee }) => 
+{
 	return (
-		<UserCardContainer key={id}>
-			<div>
+		<div className="employee-card">
+		  <div>
+				{employee.Picture != null &&
 				<Image
 					style={{ borderRadius: '50%' }}
-					src={profilePicture}
+					src={employee.Picture}
 					alt="My App Logo"
 					width={70}
 					height={70}
-				/>
+				/> 
+				}
+				
 				<div>
 					<h3>
-						{firstName},{lastName}
+						{employee.FirstName},{employee.LastName}
 					</h3>
-					<p>{email}</p>
-					<p>{jobTitle}</p>
+					<p>{employee.Mail}</p>
+					<p>{employee.Role}</p>
 				</div>
 			</div>
 			<div>
-				<MoreButton userid={id} />
+				<MoreButton userid={employee.Id} />
+			</div>
+		</div>
+	  )
+	/*
+	return (
+		<UserCardContainer key={employee.Id}>
+			<div>
+				{ <Image
+					style={{ borderRadius: '50%' }}
+					src={employee.Picture}
+					alt="My App Logo"
+					width={70}
+					height={70}
+				/> }
+				<div>
+					<h3>
+						{employee.FirstName},{employee.LastName}
+					</h3>
+					<p>{employee.Mail}</p>
+					<p>{employee.Role}</p>
+				</div>
+			</div>
+			<div>
+				<MoreButton userid={employee.Id} />
 			</div>
 		</UserCardContainer>
-	);
-};
+	)*/
+}
+
 export default UserCard;
 
 const UserCardContainer = styled.div`
