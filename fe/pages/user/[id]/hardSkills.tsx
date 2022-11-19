@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import Profil from '../../assets/person1.svg'
+import Profil from '../../../assets/person1.svg'
 import Phone from '../../assets/phone-alt.svg'
 import Edit from '../../assets/edit.svg'
 import Mail from '../../assets/envelopes.svg'
