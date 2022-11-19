@@ -44,7 +44,7 @@ const Login: React.FC = () => {
 					name="password"
 					id="password"
 				/>
-				<button type="submit">Login</button>
+				<button style={{marginBottom : "15px"}} type="submit">Login</button>
 			</form>
 			{error && <p>{error}</p>}
 		</Container>
