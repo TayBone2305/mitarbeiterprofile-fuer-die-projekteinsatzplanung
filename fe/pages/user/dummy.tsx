@@ -7,7 +7,7 @@ import Mail from '../../assets/envelopes.svg'
 import styled from 'styled-components';
 import Link from 'next/link';
 import CompLabel from '../../components/compLabel';
-
+import CompLabelSmall from '../../components/compLableSmall';
 
 export default function dummy() {
 
@@ -81,8 +81,7 @@ export default function dummy() {
           
         ))}  
             </div>
-            
-           
+              <CompLabelSmall textLeft={'fasdfadsfasdf'} textRight={'adsfasdfads'} ></CompLabelSmall>          
             </div>
             
        
