@@ -45,7 +45,10 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 
 	return (
 		<MyHeader>
+			<Link href={'/'}>
 			<Image src={msgLogo} alt="My App Logo" width={100} height={50} />
+			</Link>
+			
 			<Nav>
 				{navLinks.map((link) => (
 					<Link

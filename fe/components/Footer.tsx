@@ -1,6 +1,6 @@
 const Footer: React.FC<{}> = () => {
 	return (
-		<footer>
+		<footer style={{width : "max-content"}}>
 			<div style={{padding : "30px", background : "#AEAEAE", display : "flex", marginTop : "20px"}}>
 				<div style={{paddingRight : "220px"}}>
 					<div style={{color : "#841439"}}>
