@@ -46,8 +46,8 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 					style={{ borderRadius: '20px' }}
 					src={profilePicture}
 					alt="User Image"
-					width={200}
-					height={200}
+					width={150}
+					height={150}
 				/>
 				<MetaDataDetails>
 					<div>
@@ -238,5 +238,8 @@ const ActionContainer = styled.div`
 		padding: 10px;
 		gap: 1rem;
 		color: ${(props) => props.theme.colors.white};
+	}
+	@media (max-width: 600px) {
+		flex-direction: column;
 	}
 `;

@@ -13,6 +13,12 @@ export type UserType = {
 		name: string;
 		type: SkillType;
 	}[];
+	projects: {
+		name: string;
+		description: string;
+		startDate: string;
+		endDate: string;
+	}[];
 };
 
 export enum SkillType {
@@ -58,6 +64,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 2,
@@ -96,6 +116,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 3,
@@ -126,6 +160,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 4,
@@ -154,6 +202,20 @@ export const users: UserType[] = [
 			{
 				name: 'Kreativ',
 				type: SkillType.SOFT,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
@@ -193,6 +255,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 6,
@@ -221,6 +297,20 @@ export const users: UserType[] = [
 			{
 				name: 'Teamfähig',
 				type: SkillType.SOFT,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
@@ -253,6 +343,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 8,
@@ -281,6 +385,20 @@ export const users: UserType[] = [
 			{
 				name: 'Flexibel',
 				type: SkillType.SOFT,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
@@ -313,6 +431,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 10,
@@ -341,6 +473,20 @@ export const users: UserType[] = [
 			{
 				name: 'Empathie',
 				type: SkillType.SOFT,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
@@ -373,6 +519,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			}
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 12,
@@ -401,6 +561,20 @@ export const users: UserType[] = [
 			{
 				name: 'Organisationstalent',
 				type: SkillType.SOFT,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
@@ -433,6 +607,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 14,
@@ -461,6 +649,20 @@ export const users: UserType[] = [
 			{
 				name: 'Teamfähigkeit',
 				type: SkillType.SOFT,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
@@ -493,6 +695,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 16,
@@ -521,6 +737,20 @@ export const users: UserType[] = [
 			{
 				name: 'Stressresitent',
 				type: SkillType.SOFT,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
@@ -552,6 +782,20 @@ export const users: UserType[] = [
 				type: SkillType.SOFT,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 18,
@@ -578,6 +822,20 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+		],
 	},
 	{
 		id: 19,
@@ -602,6 +860,20 @@ export const users: UserType[] = [
 			{
 				name: 'JavaScript',
 				type: SkillType.HARD,
+			},
+		],
+		projects: [
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Project 2',
+				description: 'Project 2 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},
