@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import styled from 'styled-components';
 import { useUser } from '../context/user';
 import { login as loginUser } from '../data/user';
 
@@ -24,7 +25,7 @@ const Login: React.FC = () => {
 	};
 
 	return (
-		<div>
+		<Container>
 			<h1>Login</h1>
 			<form onSubmit={login}>
 				<label htmlFor="email">Email</label>
@@ -46,8 +47,41 @@ const Login: React.FC = () => {
 				<button type="submit">Login</button>
 			</form>
 			{error && <p>{error}</p>}
-		</div>
+		</Container>
 	);
 };
 
 export default Login;
+
+const Container = styled.div`
+	max-width: 875px;
+	margin: 0 auto;
+	h1 {
+		text-align: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 300px;
+		margin-inline: auto;
+		border: 1px solid #ccc;
+		label {
+			margin-top: 1rem;
+		}
+		input {
+			margin-top: 0.5rem;
+			padding: 0.5rem;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		button {
+			margin-top: 1rem;
+			padding: 0.5rem;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			background-color: #fff;
+			cursor: pointer;
+		}
+	}
+`;

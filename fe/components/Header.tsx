@@ -3,19 +3,42 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import msgLogo from '../assets/msg-logo.svg';
 import { useUser } from '../context/user';
+import { Role } from '../data/user';
 
 const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 	const { user } = useUser();
 
 	const navLinks = [
-		{
-			name: 'Overview',
-			href: '/',
-		},
-		{
-			name: !user ? 'Login' : 'Logout',
-			href: !user ? '/login' : '/logout',
-		},
+		...(user?.role === Role.ADMIN
+			? [
+					{
+						name: 'Overview',
+						href: '/overview',
+					},
+			  ]
+			: []),
+		...(user?.role === Role.GUEST || user?.role === Role.USER
+			? [
+					{
+						name: 'My Profile',
+						href: '/profile',
+					},
+			  ]
+			: []),
+
+		...(!user
+			? [
+					{
+						name: 'Login',
+						href: '/login',
+					},
+			  ]
+			: [
+					{
+						name: 'Logout',
+						href: '/logout',
+					},
+			  ]),
 	];
 
 	return (
@@ -32,7 +55,7 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 			</Nav>
 
 			{user && (
-				<>
+				<LoggedInUserContainer>
 					<LoggedInAs>
 						Du bist eingeloggt als <span>{user.email}</span>
 					</LoggedInAs>
@@ -45,7 +68,7 @@ const Header: React.FC<{ pathName: string }> = ({ pathName }) => {
 							height={40}
 						/>
 					</Link>
-				</>
+				</LoggedInUserContainer>
 			)}
 		</MyHeader>
 	);
@@ -56,6 +79,7 @@ export default Header;
 const MyHeader = styled.header`
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	background-color: ${(props) => props.theme.colors.white};
 	border-radius: 0.5rem;
 	margin: 0.5rem;
@@ -66,7 +90,7 @@ const MyHeader = styled.header`
 	z-index: 5;
 `;
 export const Nav = styled.nav`
-	flex: 1;
+	/* flex: 1; */
 	display: flex;
 	justify-content: center;
 	gap: 2rem;
@@ -99,6 +123,11 @@ export const Nav = styled.nav`
 			}
 		}
 	}
+`;
+
+const LoggedInUserContainer = styled.div`
+	display: flex;
+	align-items: center;
 `;
 
 const LoggedInAs = styled.p`

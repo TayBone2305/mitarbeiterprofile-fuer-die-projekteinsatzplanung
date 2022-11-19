@@ -11,7 +11,7 @@ export type UserType = {
 	hireDate: string;
 };
 
-const Role = {
+export const Role = {
 	ADMIN: 'admin',
 	USER: 'user',
 	GUEST: 'guest',
