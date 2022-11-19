@@ -17,7 +17,7 @@ const Role = {
 
 // create fake user data with roles and fake profile picture
 
-const users: UserType[] = [
+export const users: UserType[] = [
 	{
 		id: 1,
 		email: 'admin@msg.de',
