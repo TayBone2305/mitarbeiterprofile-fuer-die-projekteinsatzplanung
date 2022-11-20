@@ -21,7 +21,7 @@ const TabsComponent: React.FC<{
 		startDate: string;
 		endDate: string;
 	}[];
-	interest: UserType['interest'];
+	interest: UserType['interests'];
 }> = ({ skills, projects, interest}) => {
 	const hardSkills = skills.filter((skill) => skill.type === SkillType.HARD);
 	const softSkills = skills.filter((skill) => skill.type === SkillType.SOFT);

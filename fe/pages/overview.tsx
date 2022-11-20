@@ -8,6 +8,7 @@ import { useUser } from '../context/user';
 
 const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 	const [searchString, setSearchString] = useState('');
+	const [currentIndex, setcurrentIndex] = useState(0);
 
 	const { user: loggedInUser } = useUser();
 
@@ -28,6 +29,22 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 				<p>Du hast keine Berechtigung diese Seite zu sehen.</p>
 			</Container>
 		);
+	}
+
+	function toggleAll(){
+		setcurrentIndex(0);
+	}
+
+	function toggleDesign(){
+		setcurrentIndex(1);
+	}
+
+	function togglefrontEnd(){
+		setcurrentIndex(2);
+	}
+
+	function togglebackend(){
+		setcurrentIndex(3);
 	}
 
 	return (
@@ -53,27 +70,29 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 					<ProjectInfo>
 						<p>für welche Rolle möchtest du einen Mitarbeiter suchen?</p>
 						<div>
+						<div>
+								<input type="radio" id="all" name="role" value="all" onChange={() => toggleAll()} />
+								<label htmlFor="all">Alle</label>
+							</div>
 							<div>
 								<input
 									type="radio"
 									id="frontend"
 									name="role"
 									value="frontend"
+									onChange={() => togglefrontEnd()}
 								/>
 								<label htmlFor="frontend">Frontend</label>
 							</div>
 							<div>
-								<input type="radio" id="backend" name="role" value="backend" />
+								<input type="radio" id="backend" name="role" value="backend" onChange={() => togglebackend()} />
 								<label htmlFor="backend">Backend</label>
 							</div>
 							<div>
-								<input type="radio" id="design" name="role" value="design" />
+								<input type="radio" id="design" name="role" value="design" onChange={() => toggleDesign()} />
 								<label htmlFor="design">Design</label>
 							</div>
-							<div>
-								<input type="radio" id="all" name="role" value="all" />
-								<label htmlFor="all">Alle</label>
-							</div>
+							
 						</div>
 						<DateRange>
 							<div>
@@ -89,16 +108,54 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 						</DateRange>
 					</ProjectInfo>
 
-					{filteredUsers.length > 0 ? (
+					{ currentIndex === 0 && filteredUsers.length > 0 ? (
 						<UsersContainer>
 							{filteredUsers.map((user) => (
 								<UserCard {...user} />
 							))}
 						</UsersContainer>
 					) : (
-						<h4>
-							Keine Mitarbeiter gefunden, ändere bitte deine Suchparameter
-						</h4>
+						<p></p>
+						// <h4>
+						// 	Keine Mitarbeiter gefunden, ändere bitte deine Suchparameter
+						// </h4>
+					)}
+					{ currentIndex === 1 && filteredUsers.length > 0 ? (
+						<UsersContainer>
+							{filteredUsers.filter((val) => val.id > 0 && val.id < 7).map((user) => (
+								<UserCard {...user} />
+							))}
+						</UsersContainer>
+					) : (
+
+						<p></p>
+						// <h4>
+						// 	Keine Mitarbeiter gefunden, ändere bitte deine Suchparameter
+						// </h4>
+					)}
+					{ currentIndex === 2 && filteredUsers.length > 0 ? (
+						<UsersContainer>
+							{filteredUsers.filter((val) => val.id > 6 && val.id < 12).map((user) => (
+								<UserCard {...user} />
+							))}
+						</UsersContainer>
+					) : (
+						<p></p>
+						// <h4>
+						// 	Keine Mitarbeiter gefunden, ändere bitte deine Suchparameter
+						// </h4>
+					)}
+					{ currentIndex === 3 && filteredUsers.length > 0 ? (
+						<UsersContainer>
+							{filteredUsers.filter((val) => val.id > 8).map((user) => (
+								<UserCard {...user} />
+							))}
+						</UsersContainer>
+					) : (
+						<p></p>
+						// <h4>
+						// 	Keine Mitarbeiter gefunden, ändere bitte deine Suchparameter
+						// </h4>
 					)}
 				</>
 			)}
