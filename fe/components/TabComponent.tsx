@@ -9,7 +9,7 @@ const categories = [
 	{ name: 'Projects', slug: 'projects' },
 	{ name: 'Hard Skills', slug: 'hardSkills' },
 	{ name: 'Soft Skills', slug: 'softSkills' },
-	{ name: 'Intrest', slug: 'intrest' },
+	{ name: 'Interests', slug: 'interests' },
 ];
 
 const TabsComponent: React.FC<{
@@ -22,11 +22,11 @@ const TabsComponent: React.FC<{
 		endDate: string;
 	}[];
 	interest: UserType['interest'];
-}> = ({ skills, projects, interest}) => {
+}> = ({ skills, projects, interest }) => {
 	const hardSkills = skills.filter((skill) => skill.type === SkillType.HARD);
 	const softSkills = skills.filter((skill) => skill.type === SkillType.SOFT);
 	const intersts = interest;
-	console.log(interest, "interest")
+	console.log(interest, 'interest');
 
 	const occupied = projects.map((project) => ({
 		from: project.startDate,
@@ -47,9 +47,7 @@ const TabsComponent: React.FC<{
 						projects.map((skill, index) => (
 							<ProjectCardContainer
 								key={`projects-${index}`}
-								data-aos="fade-up"
-								color={skill.color}
-								data-aos-delay={`${(index + 1) * 2}00`}>
+								color={skill.color}>
 								<div>
 									<p>{skill.startDate}</p>
 									<span>-</span>
@@ -68,12 +66,7 @@ const TabsComponent: React.FC<{
 				<TabPanel>
 					{hardSkills.length > 0 ? (
 						hardSkills.map((skill, index) => (
-							<p
-								className="style-this"
-								data-aos="fade-up"
-								data-aos-delay={`${(index + 1) * 2}00`}>
-								{skill.name}
-							</p>
+							<p className="style-this">{skill.name}</p>
 						))
 					) : (
 						<p>Keine Hard Skills vorhanden</p>
@@ -82,12 +75,7 @@ const TabsComponent: React.FC<{
 				<TabPanel>
 					{softSkills.length > 0 ? (
 						softSkills.map((skill, index) => (
-							<p
-								className="style-this"
-								data-aos="fade-up"
-								data-aos-delay={`${(index + 1) * 2}00`}>
-								{skill.name}
-							</p>
+							<p className="style-this">{skill.name}</p>
 						))
 					) : (
 						<p>Keine Soft Skills vorhanden</p>
@@ -96,12 +84,7 @@ const TabsComponent: React.FC<{
 				<TabPanel>
 					{interest.length > 0 ? (
 						interest.map((inter, index) => (
-							<p
-								className="style-this"
-								data-aos="fade-up"
-								data-aos-delay={`${(index + 1) * 2}00`}>
-								{inter.name}
-							</p>
+							<p className="style-this">{inter.name}</p>
 						))
 					) : (
 						<p>Keine Hard Skills vorhanden</p>

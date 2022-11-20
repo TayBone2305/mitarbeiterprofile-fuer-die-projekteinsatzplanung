@@ -8,6 +8,9 @@ const Title = styled.h1`
 	text-decoration: none;
 	margin-bottom: 2rem;
 
+	@media (max-width: 600px) {
+		font-size: 2rem;
+	}
 	span {
 		color: ${({ theme }) => theme.colors.secondary};
 		text-decoration: none;

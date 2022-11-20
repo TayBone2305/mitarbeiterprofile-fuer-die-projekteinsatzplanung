@@ -33,13 +33,12 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 		hireDate,
 		skills,
 		projects,
-		interest
+		interest,
 	},
 }) => {
 	const router = useRouter();
 
 	const projectWithColor = projects.map((project) => {
-		// generate dark colors
 		const color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
 		return { ...project, color };
@@ -97,7 +96,11 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 				</MetaDataDetails>
 			</UserMetaDataContainer>
 
-			<TabsComponent projects={projectWithColor} skills={skills} interest={interest} />
+			<TabsComponent
+				projects={projectWithColor}
+				skills={skills}
+				interest={interest}
+			/>
 		</>
 	);
 };

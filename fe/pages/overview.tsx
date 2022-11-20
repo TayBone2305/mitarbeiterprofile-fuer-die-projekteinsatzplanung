@@ -34,7 +34,7 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 		<Container>
 			{loggedInUser && (
 				<Title>
-					Welcome <span>{loggedInUser?.role}!</span>
+					Welcome <span>{loggedInUser?.firstName}!</span>
 				</Title>
 			)}
 
@@ -43,15 +43,16 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 					<SearchWithIcon>
 						<SearchInput
 							type="text"
-							placeholder="mitarbeiter suchen"
+							placeholder="Search for an employee"
 							onChange={(e) => {
 								setSearchString(e.target.value);
 							}}
+							autoFocus
 						/>
 						<span>&#128269;</span>
 					</SearchWithIcon>
 					<ProjectInfo>
-						<p>für welche Rolle möchtest du einen Mitarbeiter suchen?</p>
+						<h3>Which role do you need?</h3>
 						<div>
 							<div>
 								<input
@@ -72,18 +73,16 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 							</div>
 							<div>
 								<input type="radio" id="all" name="role" value="all" />
-								<label htmlFor="all">Alle</label>
+								<label htmlFor="all">All</label>
 							</div>
 						</div>
 						<DateRange>
 							<div>
-								<label htmlFor="start">von</label>
-
+								<label htmlFor="start">From</label>
 								<input type="date" name="project-start" id="project-start" />
 							</div>
 							<div>
-								<label htmlFor="end">bis</label>
-
+								<label htmlFor="end">to</label>
 								<input type="date" name="project-end" id="project-end" />
 							</div>
 						</DateRange>
@@ -163,7 +162,14 @@ const ProjectInfo = styled.div`
 const DateRange = styled.div`
 	display: flex;
 	gap: 1rem;
-	input {
-		padding: 0.51rem;
+	> div {
+		align-items: center;
+		@media (max-width: 600px) {
+			display: flex;
+			gap: 0.5rem;
+		}
+		input {
+			padding: 0.51rem;
+		}
 	}
 `;
