@@ -7,7 +7,7 @@ const Home = () => {
 		<div style={{ paddingLeft: '15px' }}>
 			<div style={{ margin: '0 auto', display: 'table' }}>
 				<div style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-					Im Fokus
+					In focus
 				</div>
 
 				<Image

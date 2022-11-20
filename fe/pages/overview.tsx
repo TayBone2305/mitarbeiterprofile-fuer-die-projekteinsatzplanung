@@ -79,7 +79,7 @@ const Overview: NextPage<{ users: UserType[] }> = ({ users }) => {
 									value="all"
 									onChange={() => toggleAll()}
 								/>
-								<label htmlFor="all">Alle</label>
+								<label htmlFor="all">All</label>
 							</div>
 							<div>
 								<input
