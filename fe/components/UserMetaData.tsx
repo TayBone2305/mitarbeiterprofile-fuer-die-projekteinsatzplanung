@@ -33,7 +33,7 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 		hireDate,
 		skills,
 		projects,
-		interest,
+		interests: interest,
 	},
 }) => {
 	const router = useRouter();
