@@ -33,6 +33,7 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 		hireDate,
 		skills,
 		projects,
+		interest
 	},
 }) => {
 	const router = useRouter();
@@ -96,7 +97,7 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 				</MetaDataDetails>
 			</UserMetaDataContainer>
 
-			<TabsComponent projects={projectWithColor} skills={skills} />
+			<TabsComponent projects={projectWithColor} skills={skills} interest={interest} />
 		</>
 	);
 };

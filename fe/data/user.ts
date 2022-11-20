@@ -19,6 +19,9 @@ export type UserType = {
 		startDate: string;
 		endDate: string;
 	}[];
+	interest: {
+		name: string;
+	}[];
 };
 
 export enum SkillType {
@@ -136,6 +139,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-20',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 2,
@@ -244,6 +252,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-05',
 			},
 		],
+		interest: [
+			{
+				name: 'React'
+			}
+		]
 	},
 	{
 		id: 3,
@@ -351,6 +364,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-25',
 			},
 		],
+		interest: [
+			{
+				name: 'TypeScript'
+			}
+		]
 	},
 	{
 		id: 4,
@@ -425,6 +443,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-31',
 			},
 		],
+		interest: [
+			{
+				name: 'Java'
+			}
+		]
 	},
 	{
 		id: 5,
@@ -508,6 +531,11 @@ export const users: UserType[] = [
 				endDate: '2023-01-01',
 			},
 		],
+		interest: [
+			{
+				name: 'trees'
+			}
+		]
 	},
 	{
 		id: 6,
@@ -590,6 +618,11 @@ export const users: UserType[] = [
 				endDate: '2022-11-25',
 			},
 		],
+		interest: [
+			{
+				name: 'nature'
+			}
+		]
 	},
 	{
 		id: 7,
@@ -666,6 +699,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-10',
 			},
 		],
+		interest: [
+			{
+				name: 'cars'
+			}
+		]
 	},
 	{
 		id: 8,
@@ -745,6 +783,11 @@ export const users: UserType[] = [
 				endDate: '2022-11-30',
 			},
 		],
+		interest: [
+			{
+				name: 'plane'
+			}
+		]
 	},
 	{
 		id: 9,
@@ -825,6 +868,11 @@ export const users: UserType[] = [
 				endDate: '2022-11-30',
 			},
 		],
+		interest: [
+			{
+				name: 'React'
+			}
+		]
 	},
 	{
 		id: 10,
@@ -902,6 +950,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-23',
 			},
 		],
+		interest: [
+			{
+				name: 'health'
+			}
+		]
 	},
 	{
 		id: 11,
@@ -931,6 +984,7 @@ export const users: UserType[] = [
 				name: 'Selbstdiszipiln',
 				type: SkillType.SOFT,
 			},
+			
 		],
 		projects: [
 			{
@@ -980,6 +1034,11 @@ export const users: UserType[] = [
 				endDate: '2023-01-05',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 12,
@@ -1066,6 +1125,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-06',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 13,
@@ -1138,6 +1202,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-23',
 			},
 		],
+		interest: [
+			{
+				name: 'React'
+			}
+		]
 	},
 	{
 		id: 14,
@@ -1214,6 +1283,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-15',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 15,
@@ -1287,6 +1361,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-05',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 16,
@@ -1372,6 +1451,11 @@ export const users: UserType[] = [
 				endDate: '2022-12-26',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 17,
@@ -1450,6 +1534,11 @@ export const users: UserType[] = [
 				endDate: '2022-11-28',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 18,
@@ -1504,6 +1593,11 @@ export const users: UserType[] = [
 				endDate: '2022-11-28',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 	{
 		id: 19,
@@ -1559,6 +1653,11 @@ export const users: UserType[] = [
 				endDate: '2019-01-01',
 			},
 		],
+		interest: [
+			{
+				name: 'nextJS'
+			}
+		]
 	},
 ];
 

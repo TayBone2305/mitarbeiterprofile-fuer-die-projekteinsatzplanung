@@ -9,6 +9,7 @@ const categories = [
 	{ name: 'Projects', slug: 'projects' },
 	{ name: 'Hard Skills', slug: 'hardSkills' },
 	{ name: 'Soft Skills', slug: 'softSkills' },
+	{ name: 'Intrest', slug: 'intrest' },
 ];
 
 const TabsComponent: React.FC<{
@@ -20,9 +21,12 @@ const TabsComponent: React.FC<{
 		startDate: string;
 		endDate: string;
 	}[];
-}> = ({ skills, projects }) => {
+	interest: UserType['interest'];
+}> = ({ skills, projects, interest}) => {
 	const hardSkills = skills.filter((skill) => skill.type === SkillType.HARD);
 	const softSkills = skills.filter((skill) => skill.type === SkillType.SOFT);
+	const intersts = interest;
+	console.log(interest, "interest")
 
 	const occupied = projects.map((project) => ({
 		from: project.startDate,
@@ -87,6 +91,20 @@ const TabsComponent: React.FC<{
 						))
 					) : (
 						<p>Keine Soft Skills vorhanden</p>
+					)}
+				</TabPanel>
+				<TabPanel>
+					{interest.length > 0 ? (
+						interest.map((inter, index) => (
+							<p
+								className="style-this"
+								data-aos="fade-up"
+								data-aos-delay={`${(index + 1) * 2}00`}>
+								{inter.name}
+							</p>
+						))
+					) : (
+						<p>Keine Hard Skills vorhanden</p>
 					)}
 				</TabPanel>
 			</Tabs>
