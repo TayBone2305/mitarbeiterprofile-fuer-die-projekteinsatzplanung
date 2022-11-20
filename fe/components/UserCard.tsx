@@ -12,11 +12,7 @@ const UserCard: React.FC<UserType> = ({
 	jobTitle,
 }) => {
 	return (
-		<UserCardContainer
-			data-aos="fade-up"
-			data-aos-delay={`${(id + 1) * 2}00`}
-			data-aos-mirror="false"
-			key={id}>
+		<UserCardContainer key={id}>
 			<div>
 				<Image
 					style={{ borderRadius: '50%' }}

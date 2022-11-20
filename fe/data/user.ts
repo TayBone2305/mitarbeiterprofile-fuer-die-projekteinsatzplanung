@@ -72,8 +72,8 @@ export const users: UserType[] = [
 			{
 				name: 'Stock Value Prediction',
 				description: 'Stock Value Prediction with Linear Regression',
-				startDate: '2022-11-20',
-				endDate: '2022-12-01',
+				startDate: '2022-11-01',
+				endDate: '2022-11-09',
 			},
 			{
 				name: 'Enron Investigation',
@@ -92,8 +92,8 @@ export const users: UserType[] = [
 				name: 'Online Assignment Plagiarism Checker',
 				description:
 					'This plagiarism detector used the text mining method. In this software, users can register by login by creating a valid login id and password.',
-				startDate: '2022-11-20',
-				endDate: '2022-12-20',
+				startDate: '2022-11-15',
+				endDate: '2022-11-20',
 			},
 			{
 				name: 'Real-time Weather app',

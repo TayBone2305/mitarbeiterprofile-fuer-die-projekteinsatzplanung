@@ -5,6 +5,8 @@ import Edit from '../assets/edit.svg';
 import Phone from '../assets/phone-alt.svg';
 import Mail from '../assets/envelopes.svg';
 import { useRouter } from 'next/router';
+import TabsComponent from './TabComponent';
+import styled from 'styled-components';
 
 const DAY_MILLISECONDS = 1000 * 60 * 60 * 24;
 
@@ -18,11 +20,6 @@ function getRelativeTime(timestamp) {
 
 	return rtf.format(daysDifference, 'day');
 }
-const categories = [
-	{ name: 'Hard Skills', slug: 'hardSkills' },
-	{ name: 'Soft Skills', slug: 'softSkills' },
-	{ name: 'Projects', slug: 'projects' },
-];
 
 const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 	user: {
@@ -39,6 +36,13 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 	},
 }) => {
 	const router = useRouter();
+
+	const projectWithColor = projects.map((project) => {
+		// generate dark colors
+		const color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+		return { ...project, color };
+	});
 
 	return (
 		<>
@@ -73,156 +77,31 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 								<Image src={Phone} alt="User Image" width={25} height={25} />
 							</a>
 						</div>
-						<Link href={id + '/edit'} style={{ display: 'flex' }}>
-							<Image src={Edit} alt="User Image" width={25} height={25} />
-							Edit Profile
-						</Link>
+						{
+							// if route is profile, show edit button
+							router.pathname === '/profile' ? (
+								<Link title="Mitarbeiter bearbeiten" href="/edit">
+									<Image src={Edit} alt="User Image" width={25} height={25} />
+									Edit Availability
+								</Link>
+							) : (
+								<Link title="Mitarbeiter bearbeiten" href="/edit">
+									<Image src={Edit} alt="User Image" width={25} height={25} />
+									Send project participation request
+								</Link>
+							)
+						}
 					</ActionContainer>
-					<div>ab 18.11.2022 Verfügbar</div>
+					<div>available from 18.11.2022</div>
 				</MetaDataDetails>
 			</UserMetaDataContainer>
 
-			<TabsWrapper>
-				<TabsComponent projects={projects} skills={skills} />
-			</TabsWrapper>
+			<TabsComponent projects={projectWithColor} skills={skills} />
 		</>
 	);
 };
 
 export default UserMetaData;
-
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import styled from 'styled-components';
-import React from 'react';
-
-const TabsComponent: React.FC<{
-	skills: UserType['skills'];
-	projects: UserType['projects'];
-}> = ({ skills, projects }) => {
-	const hardSkills = skills.filter((skill) => skill.type === SkillType.HARD);
-	const softSkills = skills.filter((skill) => skill.type === SkillType.SOFT);
-
-	return (
-		<Tabs>
-			<TabList>
-				{categories.map((category) => (
-					<Tab>{category.name}</Tab>
-				))}
-			</TabList>
-
-			<TabPanel>
-				{hardSkills.length > 0 ? (
-					hardSkills.map((skill, index) => (
-						<p data-aos="fade-up" data-aos-delay={`${(index + 1) * 2}00`}>
-							{skill.name}
-						</p>
-					))
-				) : (
-					<p>Keine Hard Skills vorhanden</p>
-				)}
-			</TabPanel>
-			<TabPanel>
-				{softSkills.length > 0 ? (
-					softSkills.map((skill, index) => (
-						<p data-aos="fade-up" data-aos-delay={`${(index + 1) * 2}00`}>
-							{skill.name}
-						</p>
-					))
-				) : (
-					<p>Keine Soft Skills vorhanden</p>
-				)}
-			</TabPanel>
-			<TabPanel>
-				{projects.length > 0 ? (
-					projects.map((skill, index) => (
-						<div data-aos="fade-up" data-aos-delay={`${(index + 1) * 2}00`}>
-							<div>
-								<p>{skill.startDate}</p>
-								<span>-</span>
-								<p>{skill.endDate}</p>
-							</div>
-							<h3>{skill.name}</h3>
-							<p>{skill.description}</p>
-						</div>
-					))
-				) : (
-					<p>Keine Soft Projekte vorhanden</p>
-				)}
-			</TabPanel>
-		</Tabs>
-	);
-};
-
-const TabsWrapper = styled.nav`
-	/* flex: 1; */
-	display: flex;
-	justify-content: center;
-	gap: 2rem;
-
-	.react-tabs {
-		width: 100%;
-	}
-	.react-tabs__tab-panel {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 0.5rem;
-		color: ${(props) => props.theme.colors.text};
-		> * {
-			padding: 1rem;
-			border-radius: 1rem;
-			background-color: ${({ theme }) => theme.colors.gray};
-			margin: 0;
-			box-shadow: 3px 8px 10px #0000004a;
-			display: flex;
-			flex-direction: column;
-			gap: 1rem;
-			> * {
-				margin: 0;
-				&:is(div) {
-					display: flex;
-					gap: 0.5rem;
-					align-items: center;
-				}
-				&:is(p) {
-					flex: 1;
-				}
-				> p {
-					margin: 0;
-				}
-			}
-		}
-	}
-
-	li.react-tabs__tab {
-		position: relative;
-		color: ${(props) => props.theme.colors.primary};
-		text-decoration: none;
-		font-weight: bolder;
-		&::after {
-			content: '';
-			display: block;
-			opacity: 0;
-			position: absolute;
-			left: -8px;
-			bottom: 4px;
-			width: 70px;
-			height: 7px;
-			border-radius: 50%;
-			background-color: ${(props) => props.theme.colors.secondary};
-			transition: width 0.3s ease-in-out 1s, bottom 0.3s ease-in-out 1s;
-		}
-		&.active {
-			color: ${(props) => props.theme.colors.gray};
-
-			&::after {
-				transition: width 0.3s ease-in-out;
-				width: 7px;
-				opacity: 1;
-			}
-		}
-	}
-`;
 
 const UserMetaDataContainer = styled.div`
 	display: flex;
@@ -259,6 +138,11 @@ const MetaDataDetails = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	@media (max-width: 600px) {
+		> div {
+			text-align: center;
+		}
+	}
 
 	h1 {
 		font-size: 2rem;
@@ -294,6 +178,14 @@ const ActionContainer = styled.div`
 		padding: 10px;
 		gap: 1rem;
 		color: ${(props) => props.theme.colors.white};
+	}
+	+ div {
+		background-color: ${(props) => props.theme.colors.primary};
+		border-radius: 10px;
+		padding: 3px 8px;
+		opacity: 0.8;
+		color: ${(props) => props.theme.colors.white};
+		align-self: start;
 	}
 	@media (max-width: 600px) {
 		flex-direction: column;
