@@ -27,7 +27,7 @@ const UserCard: React.FC<UserType> = ({
 				/>
 				<div>
 					<h3>
-						{firstName},{lastName}
+						{firstName}, {lastName}
 					</h3>
 					<p>{email}</p>
 					<p>{jobTitle}</p>
