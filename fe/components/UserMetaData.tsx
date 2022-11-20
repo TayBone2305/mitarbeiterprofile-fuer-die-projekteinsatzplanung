@@ -137,13 +137,13 @@ const TabsComponent: React.FC<{
 				{projects.length > 0 ? (
 					projects.map((skill, index) => (
 						<div data-aos="fade-up" data-aos-delay={`${(index + 1) * 2}00`}>
-							<h3>{skill.name}</h3>
-							<p>{skill.description}</p>
 							<div>
 								<p>{skill.startDate}</p>
 								<span>-</span>
 								<p>{skill.endDate}</p>
 							</div>
+							<h3>{skill.name}</h3>
+							<p>{skill.description}</p>
 						</div>
 					))
 				) : (
@@ -165,7 +165,7 @@ const TabsWrapper = styled.nav`
 	}
 	.react-tabs__tab-panel {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		gap: 0.5rem;
 		color: ${(props) => props.theme.colors.text};
 		> * {
@@ -179,7 +179,7 @@ const TabsWrapper = styled.nav`
 			gap: 1rem;
 			> * {
 				margin: 0;
-				&:last-child {
+				&:is(div) {
 					display: flex;
 					gap: 0.5rem;
 					align-items: center;
