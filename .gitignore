@@ -3,3 +3,4 @@ be/node_modules/
 .env
 node_modules/
 index.html
+fe/public/sw.js.map

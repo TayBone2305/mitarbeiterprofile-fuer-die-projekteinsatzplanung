@@ -52,6 +52,10 @@ export const users: UserType[] = [
 				type: SkillType.HARD,
 			},
 			{
+				name: 'Kommunikationsfähigkeit',
+				type: SkillType.SOFT,
+			},
+			{
 				name: 'CSS',
 				type: SkillType.HARD,
 			},
@@ -70,6 +74,60 @@ export const users: UserType[] = [
 				description: 'Stock Value Prediction with Linear Regression',
 				startDate: '2022-11-20',
 				endDate: '2022-12-01',
+			},
+			{
+				name: 'Enron Investigation',
+				description:
+					'Enron Investigation with focus on social network analyses, using graph theory',
+				startDate: '2022-11-23',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'Chatbots',
+				description: 'enhanced functions of the msg chatbot',
+				startDate: '2022-11-23',
+				endDate: '2022-12-05',
+			},
+			{
+				name: 'Online Assignment Plagiarism Checker',
+				description:
+					'This plagiarism detector used the text mining method. In this software, users can register by login by creating a valid login id and password.',
+				startDate: '2022-11-20',
+				endDate: '2022-12-20',
+			},
+			{
+				name: 'Real-time Weather app',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				startDate: '2022-11-30',
+				endDate: '2022-12-03',
+			},
+			{
+				name: 'Movie App',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-12',
+			},
+			{
+				name: 'Real-time Weather app',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				startDate: '2022-11-30',
+				endDate: '2022-12-03',
+			},
+			{
+				name: 'Movie App',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-12',
+			},
+			{
+				name: 'Real-Time Chat Application',
+				description: 'A full-fledged real-time chat application',
+				startDate: '2022-11-20',
+				endDate: '2022-11-25',
 			},
 			{
 				name: 'Predict Housing Price',
@@ -127,9 +185,57 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Enron Investigation',
-				description: 'Enron Investigation with focus on social network analyses, using graph theory',
+				description:
+					'Enron Investigation with focus on social network analyses, using graph theory',
 				startDate: '2022-11-23',
 				endDate: '2022-12-01',
+			},
+			{
+				name: 'Chatbots',
+				description: 'enhanced functions of the msg chatbot',
+				startDate: '2022-11-23',
+				endDate: '2022-12-05',
+			},
+			{
+				name: 'Online Assignment Plagiarism Checker',
+				description:
+					'This plagiarism detector used the text mining method. In this software, users can register by login by creating a valid login id and password.',
+				startDate: '2022-11-20',
+				endDate: '2022-12-20',
+			},
+			{
+				name: 'Real-time Weather app',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				startDate: '2022-11-30',
+				endDate: '2022-12-03',
+			},
+			{
+				name: 'Movie App',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-12',
+			},
+			{
+				name: 'Real-Time Chat Application',
+				description: 'A full-fledged real-time chat application',
+				startDate: '2022-11-20',
+				endDate: '2022-11-25',
+			},
+			{
+				name: 'Personality Prediction System via CV Analysis',
+				description:
+					'This project aims to create advanced software that can provide a legally justified and fair CV ranking system',
+				startDate: '2022-12-21',
+				endDate: '2022-12-31',
+			},
+			{
+				name: 'Facial Emotion Recognition and Detection',
+				description:
+					'pioneering modern application of Deep Learning – facial emotion recognition',
+				startDate: '2022-12-05',
+				endDate: '2022-12-25',
 			},
 			{
 				name: 'Stock Price Prediction',
@@ -204,8 +310,43 @@ export const users: UserType[] = [
 				endDate: '2022-12-05',
 			},
 			{
+				name: 'Online Assignment Plagiarism Checker',
+				description:
+					'This plagiarism detector used the text mining method. In this software, users can register by login by creating a valid login id and password.',
+				startDate: '2022-11-20',
+				endDate: '2022-12-20',
+			},
+			{
+				name: 'Real-time Weather app',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				startDate: '2022-11-30',
+				endDate: '2022-12-03',
+			},
+			{
+				name: 'Movie App',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-12',
+			},
+			{
+				name: 'Real-Time Chat Application',
+				description: 'A full-fledged real-time chat application',
+				startDate: '2022-11-20',
+				endDate: '2022-11-25',
+			},
+			{
+				name: 'Personality Prediction System via CV Analysis',
+				description:
+					'This project aims to create advanced software that can provide a legally justified and fair CV ranking system',
+				startDate: '2022-12-21',
+				endDate: '2022-12-31',
+			},
+			{
 				name: 'Facial Emotion Recognition and Detection',
-				description: 'pioneering modern application of Deep Learning – facial emotion recognition',
+				description:
+					'pioneering modern application of Deep Learning – facial emotion recognition',
 				startDate: '2022-12-05',
 				endDate: '2022-12-25',
 			},
@@ -251,13 +392,35 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Online Assignment Plagiarism Checker',
-				description: 'This plagiarism detector used the text mining method. In this software, users can register by login by creating a valid login id and password.',
+				description:
+					'This plagiarism detector used the text mining method. In this software, users can register by login by creating a valid login id and password.',
 				startDate: '2022-11-20',
 				endDate: '2022-12-20',
 			},
 			{
+				name: 'Real-time Weather app',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				startDate: '2022-11-30',
+				endDate: '2022-12-03',
+			},
+			{
+				name: 'Movie App',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-12',
+			},
+			{
+				name: 'Real-Time Chat Application',
+				description: 'A full-fledged real-time chat application',
+				startDate: '2022-11-20',
+				endDate: '2022-11-25',
+			},
+			{
 				name: 'Personality Prediction System via CV Analysis',
-				description: 'This project aims to create advanced software that can provide a legally justified and fair CV ranking system',
+				description:
+					'This project aims to create advanced software that can provide a legally justified and fair CV ranking system',
 				startDate: '2022-12-21',
 				endDate: '2022-12-31',
 			},
@@ -311,13 +474,36 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Heart Disease Prediction Project',
-				description: 'This project is beneficial from the medical perspective since it is designed to provide online medical consultation and guidance to patients suffering from heart diseases. Patients often complain that they cannot find good doctors to support their medical needs, which further aggravates their situation. This heart disease prediction application will help combat the issue. ',
+				description:
+					'This project is beneficial from the medical perspective since it is designed to provide online medical consultation and guidance to patients suffering from heart diseases. Patients often complain that they cannot find good doctors to support their medical needs, which further aggravates their situation. This heart disease prediction application will help combat the issue. ',
 				startDate: '2022-11-20',
 				endDate: '2022-12-20',
 			},
 			{
+				name: 'Online Assignment Plagiarism Checker',
+				description:
+					'This plagiarism detector used the text mining method. In this software, users can register by login by creating a valid login id and password.',
+				startDate: '2022-11-20',
+				endDate: '2022-12-20',
+			},
+			{
+				name: 'Real-time Weather app',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				startDate: '2022-11-30',
+				endDate: '2022-12-03',
+			},
+			{
+				name: 'Movie App',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-12',
+			},
+			{
 				name: 'Banking Bot ',
-				description: 'The banking bot is an Android application. Like a chatbot, it is trained to process the users’ queries/requests and understand what services or information they are looking for. The bot will communicate with users like another human being. So, no matter how you ask a question, the bot can answer it and, if required, even escalate issues to human executives. ',
+				description:
+					'The banking bot is an Android application. Like a chatbot, it is trained to process the users’ queries/requests and understand what services or information they are looking for. The bot will communicate with users like another human being. So, no matter how you ask a question, the bot can answer it and, if required, even escalate issues to human executives. ',
 				startDate: '2022-12-21',
 				endDate: '2023-01-01',
 			},
@@ -371,15 +557,37 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Grocery List',
-				description: 'Hungry? Let’s go some grocery shopping with our grocery list. This is a cool app using which you can keep a list of items you need to buy, you just have to add the items needed. You can also delete the item/items which are not required. ',
+				description:
+					'Hungry? Let’s go some grocery shopping with our grocery list. This is a cool app using which you can keep a list of items you need to buy, you just have to add the items needed. You can also delete the item/items which are not required. ',
 				startDate: '2022-11-25',
 				endDate: '2022-12-01',
 			},
 			{
 				name: 'JavaScript Form Validation',
-				description: 'Many websites utilize form validation for client-side validation of user details, card details, address details, and other information. If a mandatory input field name exists, the user can type a number, leave the field blank, type only one letter, and so on.',
+				description:
+					'Many websites utilize form validation for client-side validation of user details, card details, address details, and other information. If a mandatory input field name exists, the user can type a number, leave the field blank, type only one letter, and so on.',
 				startDate: '2022-12-01',
 				endDate: '2022-12-10',
+			},
+			{
+				name: 'Real-time Weather app',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				startDate: '2022-11-30',
+				endDate: '2022-12-03',
+			},
+			{
+				name: 'Movie App',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-12',
+			},
+			{
+				name: 'Real-Time Chat Application',
+				description: 'A full-fledged real-time chat application',
+				startDate: '2022-11-20',
+				endDate: '2022-11-25',
 			},
 		],
 	},
@@ -419,15 +627,43 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Real-time Weather app',
-				description: 'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
+				description:
+					'Our weather app will display weather data from the API like this: an icon that represents the current weather status, the temperature value (18°C) in Celsius units, the weather description (clear sky), and finally the user’s city and country (London, GB).',
 				startDate: '2022-11-30',
 				endDate: '2022-12-03',
 			},
 			{
 				name: 'Movie App',
-				description: 'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
+				description:
+					'This is a movie app made with HTML, CSS, JavaScript, jQuery, and Bootstrap using API calls from The Movie Database. It uses API calls to get movies from The Movie Database. Users can view the most popular movies, arrange them by genre, or use the search function to find other titles.',
 				startDate: '2022-12-04',
 				endDate: '2022-12-12',
+			},
+			{
+				name: 'Real-Time Chat Application',
+				description: 'A full-fledged real-time chat application',
+				startDate: '2022-11-20',
+				endDate: '2022-11-25',
+			},
+			{
+				name: 'File Sharing App',
+				description:
+					'Utilization of the Virgil Crypto Library in JavaScript to construct a secure file-sharing app. You can download, decrypt, and view encrypted media files from a browser after completing the procedures in the setup section.',
+				startDate: '2022-11-26',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Chat App',
+				description:
+					'A chat app using firebase, authentication, firebase real-time database management.',
+				startDate: '2022-11-10',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'E-Commerce Website',
+				description: 'A E-Commerce Website using Sveltestarp and Svelte.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-10',
 			},
 		],
 	},
@@ -477,8 +713,35 @@ export const users: UserType[] = [
 			},
 			{
 				name: 'File Sharing App',
-				description: 'Utilization of the Virgil Crypto Library in JavaScript to construct a secure file-sharing app. You can download, decrypt, and view encrypted media files from a browser after completing the procedures in the setup section.',
+				description:
+					'Utilization of the Virgil Crypto Library in JavaScript to construct a secure file-sharing app. You can download, decrypt, and view encrypted media files from a browser after completing the procedures in the setup section.',
 				startDate: '2022-11-26',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Chat App',
+				description:
+					'A chat app using firebase, authentication, firebase real-time database management.',
+				startDate: '2022-11-10',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'E-Commerce Website',
+				description: 'A E-Commerce Website using Sveltestarp and Svelte.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-10',
+			},
+			{
+				name: 'Pricing Component',
+				description: 'Responsive Services Section using CSS Flexbox',
+				startDate: '2022-11-01',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
 				endDate: '2022-11-30',
 			},
 		],
@@ -523,15 +786,43 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Portfolio Website',
-				description: 'Classic, dynamic, & multifunctional portfolio website. This site showcases your projects and portfolio.',
+				description:
+					'Classic, dynamic, & multifunctional portfolio website. This site showcases your projects and portfolio.',
 				startDate: '2022-11-15',
 				endDate: '2022-11-25',
 			},
 			{
 				name: 'Meme Generator',
-				description: 'Users need to enter the required text for the meme and create memes with ease.',
+				description:
+					'Users need to enter the required text for the meme and create memes with ease.',
 				startDate: '2022-11-26',
 				endDate: '2022-12-01',
+			},
+			{
+				name: 'Chat App',
+				description:
+					'A chat app using firebase, authentication, firebase real-time database management.',
+				startDate: '2022-11-10',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'E-Commerce Website',
+				description: 'A E-Commerce Website using Sveltestarp and Svelte.',
+				startDate: '2022-12-04',
+				endDate: '2022-12-10',
+			},
+			{
+				name: 'Pricing Component',
+				description: 'Responsive Services Section using CSS Flexbox',
+				startDate: '2022-11-01',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
 			},
 		],
 	},
@@ -567,7 +858,8 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Chat App',
-				description: 'A chat app using firebase, authentication, firebase real-time database management.',
+				description:
+					'A chat app using firebase, authentication, firebase real-time database management.',
 				startDate: '2022-11-10',
 				endDate: '2022-12-01',
 			},
@@ -576,6 +868,38 @@ export const users: UserType[] = [
 				description: 'A E-Commerce Website using Sveltestarp and Svelte.',
 				startDate: '2022-12-04',
 				endDate: '2022-12-10',
+			},
+			{
+				name: 'Pricing Component',
+				description: 'Responsive Services Section using CSS Flexbox',
+				startDate: '2022-11-01',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
+			},
+			{
+				name: 'IP Address Tracker',
+				description: ' IP Tracking application.',
+				startDate: '2022-12-10',
+				endDate: '2022-12-15',
+			},
+			{
+				name: 'Landing Page Design',
+				description: 'Landing Page design using HTML and CSS',
+				startDate: '2022-12-11',
+				endDate: '2022-12-23',
 			},
 		],
 	},
@@ -611,13 +935,47 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Content Management System',
-				description: 'CMS with features like blog post, add elements, delete elements.',
+				description:
+					'CMS with features like blog post, add elements, delete elements.',
 				startDate: '2022-11-01',
 				endDate: '2022-12-01',
 			},
 			{
+				name: 'Pricing Component',
+				description: 'Responsive Services Section using CSS Flexbox',
+				startDate: '2022-11-01',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
+			},
+			{
+				name: 'IP Address Tracker',
+				description: ' IP Tracking application.',
+				startDate: '2022-12-10',
+				endDate: '2022-12-15',
+			},
+			{
+				name: 'Landing Page Design',
+				description: 'Landing Page design using HTML and CSS',
+				startDate: '2022-12-11',
+				endDate: '2022-12-23',
+			},
+			{
 				name: 'Job listings with filtering',
-				description: 'Job Listings using DOM concept, including Different types of job filtering and an option to save the list, etc.',
+				description:
+					'Job Listings using DOM concept, including Different types of job filtering and an option to save the list, etc.',
 				startDate: '2022-12-04',
 				endDate: '2023-01-05',
 			},
@@ -663,13 +1021,47 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'MSG Music Player',
-				description: 'MSG Music Player with features like Track loading, Track Art, Track details, shuffle play, repeat play, Playlists, and random background color change.',
+				description:
+					'MSG Music Player with features like Track loading, Track Art, Track details, shuffle play, repeat play, Playlists, and random background color change.',
 				startDate: '2022-11-01',
 				endDate: '2022-12-01',
 			},
 			{
+				name: 'Pricing Component',
+				description: 'Responsive Services Section using CSS Flexbox',
+				startDate: '2022-11-01',
+				endDate: '2022-12-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
+			},
+			{
+				name: 'IP Address Tracker',
+				description: ' IP Tracking application.',
+				startDate: '2022-12-10',
+				endDate: '2022-12-15',
+			},
+			{
+				name: 'Landing Page Design',
+				description: 'Landing Page design using HTML and CSS',
+				startDate: '2022-12-11',
+				endDate: '2022-12-23',
+			},
+			{
 				name: 'URL shortening API landing page',
-				description: 'API integration and the JavaScript libraries like VUE and React',
+				description:
+					'API integration and the JavaScript libraries like VUE and React',
 				startDate: '2022-12-03',
 				endDate: '2022-12-06',
 			},
@@ -718,6 +1110,26 @@ export const users: UserType[] = [
 				description: 'Responsive Services Section using CSS Flexbox',
 				startDate: '2022-11-01',
 				endDate: '2022-12-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
+			},
+			{
+				name: 'IP Address Tracker',
+				description: ' IP Tracking application.',
+				startDate: '2022-12-10',
+				endDate: '2022-12-15',
 			},
 			{
 				name: 'Landing Page Design',
@@ -776,6 +1188,26 @@ export const users: UserType[] = [
 				endDate: '2022-12-01',
 			},
 			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
+			},
+			{
 				name: 'IP Address Tracker',
 				description: ' IP Tracking application.',
 				startDate: '2022-12-10',
@@ -823,7 +1255,8 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'User Authentication System',
-				description: 'Authentication in NodeJS with PassportJS, Creating a Login system in PHP',
+				description:
+					'Authentication in NodeJS with PassportJS, Creating a Login system in PHP',
 				startDate: '2022-11-18',
 				endDate: '2022-11-29',
 			},
@@ -832,6 +1265,26 @@ export const users: UserType[] = [
 				description: 'Proxy Server of MSG Employee Database',
 				startDate: '2022-12-01',
 				endDate: '2023-01-01',
+			},
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
 			},
 		],
 	},
@@ -892,8 +1345,29 @@ export const users: UserType[] = [
 				endDate: '2022-12-01',
 			},
 			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
+			},
+			{
 				name: 'Web Crawler Application',
-				description: 'An application for MSG that can crawl the web for the purpose of web indexing or gathering data.',
+				description:
+					'An application for MSG that can crawl the web for the purpose of web indexing or gathering data.',
 				startDate: '2022-12-25',
 				endDate: '2022-12-26',
 			},
@@ -948,8 +1422,30 @@ export const users: UserType[] = [
 				endDate: '2019-01-01',
 			},
 			{
+				name: 'Detecting Parkinson’s Disease',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				startDate: '2022-11-10',
+				endDate: '2022-11-30',
+			},
+			{
+				name: 'Air Pollution Prediction',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
+				startDate: '2022-12-01',
+				endDate: '2022-12-05',
+			},
+			{
+				name: 'Road Traffic Prediction',
+				description:
+					'Road Traffic Prediction for MSG Employees for punctuality',
+				startDate: '2022-11-23',
+				endDate: '2022-11-26',
+			},
+			{
 				name: 'Backend for the E-Commerce Application MSGazon',
-				description: 'Backend for the E-Commerce Application MSGazon for MSG Employees',
+				description:
+					'Backend for the E-Commerce Application MSGazon for MSG Employees',
 				startDate: '2022-11-25',
 				endDate: '2022-11-28',
 			},
@@ -989,9 +1485,23 @@ export const users: UserType[] = [
 			},
 			{
 				name: 'Road Traffic Prediction',
-				description: 'Road Traffic Prediction for MSG Employees for punctuality',
+				description:
+					'Road Traffic Prediction for MSG Employees for punctuality',
 				startDate: '2022-11-23',
 				endDate: '2022-11-26',
+			},
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
+			},
+			{
+				name: 'Backend for the E-Commerce Application MSGazon',
+				description:
+					'Backend for the E-Commerce Application MSGazon for MSG Employees',
+				startDate: '2022-11-25',
+				endDate: '2022-11-28',
 			},
 		],
 	},
@@ -1023,15 +1533,30 @@ export const users: UserType[] = [
 		projects: [
 			{
 				name: 'Detecting Parkinson’s Disease',
-				description: 'Application Detecting Parkinson’s Disease for the health of MSG Employees',
+				description:
+					'Application Detecting Parkinson’s Disease for the health of MSG Employees',
 				startDate: '2022-11-10',
 				endDate: '2022-11-30',
 			},
 			{
 				name: 'Air Pollution Prediction',
-				description: 'Air Pollution Prediction for better lung condition of MSG Employees',
+				description:
+					'Air Pollution Prediction for better lung condition of MSG Employees',
 				startDate: '2022-12-01',
 				endDate: '2022-12-05',
+			},
+			{
+				name: 'Road Traffic Prediction',
+				description:
+					'Road Traffic Prediction for MSG Employees for punctuality',
+				startDate: '2022-11-23',
+				endDate: '2022-11-26',
+			},
+			{
+				name: 'Project 1',
+				description: 'Project 1 description',
+				startDate: '2019-01-01',
+				endDate: '2019-01-01',
 			},
 		],
 	},

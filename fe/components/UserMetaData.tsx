@@ -35,13 +35,14 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 		phone,
 		hireDate,
 		skills,
+		projects,
 	},
 }) => {
 	const router = useRouter();
 
 	return (
 		<>
-			<UserMetaDataContainer>
+			<UserMetaDataContainer data-aos="fade-up">
 				<Image
 					style={{ borderRadius: '20px' }}
 					src={profilePicture}
@@ -82,7 +83,7 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 			</UserMetaDataContainer>
 
 			<TabsWrapper>
-				<TabsComponent skills={skills} />
+				<TabsComponent projects={projects} skills={skills} />
 			</TabsWrapper>
 		</>
 	);
@@ -95,9 +96,10 @@ import 'react-tabs/style/react-tabs.css';
 import styled from 'styled-components';
 import React from 'react';
 
-const TabsComponent: React.FC<{ skills: UserType['skills'] }> = ({
-	skills,
-}) => {
+const TabsComponent: React.FC<{
+	skills: UserType['skills'];
+	projects: UserType['projects'];
+}> = ({ skills, projects }) => {
 	const hardSkills = skills.filter((skill) => skill.type === SkillType.HARD);
 	const softSkills = skills.filter((skill) => skill.type === SkillType.SOFT);
 
@@ -111,21 +113,39 @@ const TabsComponent: React.FC<{ skills: UserType['skills'] }> = ({
 
 			<TabPanel>
 				{hardSkills.length > 0 ? (
-					hardSkills.map((skill) => <p>{skill.name}</p>)
+					hardSkills.map((skill, index) => (
+						<p data-aos="fade-up" data-aos-delay={`${(index + 1) * 2}00`}>
+							{skill.name}
+						</p>
+					))
 				) : (
 					<p>Keine Hard Skills vorhanden</p>
 				)}
 			</TabPanel>
 			<TabPanel>
 				{softSkills.length > 0 ? (
-					softSkills.map((skill) => <p>{skill.name}</p>)
+					softSkills.map((skill, index) => (
+						<p data-aos="fade-up" data-aos-delay={`${(index + 1) * 2}00`}>
+							{skill.name}
+						</p>
+					))
 				) : (
 					<p>Keine Soft Skills vorhanden</p>
 				)}
 			</TabPanel>
 			<TabPanel>
-				{softSkills.length > 0 ? (
-					hardSkills.map((skill) => <p>{skill.name}</p>)
+				{projects.length > 0 ? (
+					projects.map((skill, index) => (
+						<div data-aos="fade-up" data-aos-delay={`${(index + 1) * 2}00`}>
+							<h3>{skill.name}</h3>
+							<p>{skill.description}</p>
+							<div>
+								<p>{skill.startDate}</p>
+								<span>-</span>
+								<p>{skill.endDate}</p>
+							</div>
+						</div>
+					))
 				) : (
 					<p>Keine Soft Projekte vorhanden</p>
 				)}
@@ -142,6 +162,36 @@ const TabsWrapper = styled.nav`
 
 	.react-tabs {
 		width: 100%;
+	}
+	.react-tabs__tab-panel {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 0.5rem;
+		color: ${(props) => props.theme.colors.text};
+		> * {
+			padding: 1rem;
+			border-radius: 1rem;
+			background-color: ${({ theme }) => theme.colors.gray};
+			margin: 0;
+			box-shadow: 3px 8px 10px #0000004a;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			> * {
+				margin: 0;
+				&:last-child {
+					display: flex;
+					gap: 0.5rem;
+					align-items: center;
+				}
+				&:is(p) {
+					flex: 1;
+				}
+				> p {
+					margin: 0;
+				}
+			}
+		}
 	}
 
 	li.react-tabs__tab {
@@ -184,10 +234,13 @@ const UserMetaDataContainer = styled.div`
 	gap: 2rem;
 	margin: 0 auto;
 	margin-bottom: 3rem;
-	box-shadow: 4px 7px 14px 6px #0000001c;
+	box-shadow: 4px 7px 14px 6px #0000001c, -1px -50px 0px 16px #841439;
 	position: relative;
 	background-color: ${(props) => props.theme.colors.white};
-	&::after {
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
+	/* &::after {
 		content: '';
 		width: 114%;
 		height: 100%;
@@ -196,7 +249,10 @@ const UserMetaDataContainer = styled.div`
 		z-index: -1;
 		border-radius: 20px;
 		bottom: 60px;
-	}
+		@media (max-width: 768px) {
+			width: 104%;
+		}
+	} */
 `;
 
 const MetaDataDetails = styled.div`
