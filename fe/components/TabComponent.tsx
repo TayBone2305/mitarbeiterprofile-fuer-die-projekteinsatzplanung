@@ -21,12 +21,10 @@ const TabsComponent: React.FC<{
 		startDate: string;
 		endDate: string;
 	}[];
-	interest: UserType['interest'];
+	interests: UserType['interests'];
 }> = ({ skills, projects, interests }) => {
 	const hardSkills = skills.filter((skill) => skill.type === SkillType.HARD);
 	const softSkills = skills.filter((skill) => skill.type === SkillType.SOFT);
-	const intersts = interest;
-	console.log(interest, 'interest');
 
 	const occupied = projects.map((project) => ({
 		from: project.startDate,
@@ -82,8 +80,8 @@ const TabsComponent: React.FC<{
 					)}
 				</TabPanel>
 				<TabPanel>
-					{interest.length > 0 ? (
-						interest.map((inter, index) => (
+					{interests.length > 0 ? (
+						interests.map((inter, index) => (
 							<p className="style-this">{inter.name}</p>
 						))
 					) : (

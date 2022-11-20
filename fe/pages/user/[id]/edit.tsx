@@ -10,7 +10,7 @@ const Projects: NextPage<{ user: UserType }> = ({ user }) => {
 
 	return (
 		<Container>
-			<UserMetaData user={user} />
+			<UserMetaData inEditMode user={user} />
 			<form>
 				<input
 					type="text"

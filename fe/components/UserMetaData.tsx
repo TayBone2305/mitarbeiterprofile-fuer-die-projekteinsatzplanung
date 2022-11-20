@@ -21,7 +21,10 @@ function getRelativeTime(timestamp) {
 	return rtf.format(daysDifference, 'day');
 }
 
-const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
+const UserMetaData: React.FC<{
+	user: Omit<UserType, 'password'>;
+	inEditMode?: boolean;
+}> = ({
 	user: {
 		firstName,
 		lastName,
@@ -33,8 +36,9 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 		hireDate,
 		skills,
 		projects,
-		interests: interest,
+		interests,
 	},
+	inEditMode,
 }) => {
 	const router = useRouter();
 
@@ -80,12 +84,16 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 						{
 							// if route is profile, show edit button
 							router.pathname === '/profile' ? (
-								<Link title="Mitarbeiter bearbeiten" href="/edit">
+								<Link
+									title="Mitarbeiter bearbeiten"
+									href={'/user/' + id + '/edit'}>
 									<Image src={Edit} alt="User Image" width={25} height={25} />
 									Edit Availability
 								</Link>
 							) : (
-								<Link title="Mitarbeiter bearbeiten" href="/edit">
+								<Link
+									title="Mitarbeiter bearbeiten"
+									href={'/user/' + id + '/edit'}>
 									<Image src={Edit} alt="User Image" width={25} height={25} />
 									Send project participation request
 								</Link>
@@ -95,12 +103,13 @@ const UserMetaData: React.FC<{ user: Omit<UserType, 'password'> }> = ({
 					<div>available from 18.11.2022</div>
 				</MetaDataDetails>
 			</UserMetaDataContainer>
-
-			<TabsComponent
-				projects={projectWithColor}
-				skills={skills}
-				interest={interest}
-			/>
+			{!inEditMode && (
+				<TabsComponent
+					projects={projectWithColor}
+					skills={skills}
+					interests={interests}
+				/>
+			)}
 		</>
 	);
 };
